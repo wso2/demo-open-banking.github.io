@@ -1,0 +1,476 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; color: inherit; }
+
+/* BRIDGING STYLES */
+body { background-image: none; background-color: #000; font-family: 'Nunito Sans', sans-serif; padding-top: 4rem; }
+.cSectionBelowHighlight { margin-top: -9rem; }
+.cHighlightedRow { margin: -8.75rem auto; }
+.row { padding-top: 0; padding-bottom: 0; }
+/* BRIDGING STYLES END */
+body { font-size: 100%; font-family: 'Roboto', sans-serif; color: #434343; }
+
+/* TITLE STYLES */
+h1 { font-size: 2.4rem; line-height: 3.35rem; font-weight: 400; letter-spacing: .2rem; margin: 0 0 1.5rem; display: block; }
+h2 { font-size: 2rem; line-height: 2.75rem; font-weight: 300; letter-spacing: .05rem; margin: 0 0 1.5rem; display: block; }
+h3 { font-size: 1.5rem; line-height: 2rem; font-weight: 400; letter-spacing: .05rem; margin: 0 0 1.5rem; display: block; }
+h4 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; letter-spacing: .05rem; margin: 0 0 1.5rem; display: block; }
+h5 { font-size: 1rem; line-height: 1.6rem; font-weight: 500; letter-spacing: .05rem; margin: 0 0 1.25rem; display: block; }
+
+/* PARAGRAPH STYLES */
+p { font-size: 1rem; line-height: 1.6rem; font-weight: 400; letter-spacing: .018rem; margin: 0 0 1.5rem; }
+p.cBottom { margin: 0 0 0.75rem; }
+strong { font-weight: 700; }
+
+/* LIST STYLES */
+ul { margin: 0 0 1.5rem 2rem; }
+ul li { font-size: 1rem; line-height: 1.6rem; font-weight: 400; letter-spacing: .01rem; margin: 0 0 .5rem; }
+ul.cNoStyle { list-style: none; padding: 0; margin: 1.5rem 0; }
+ul.cNoStyle li { padding: 5px 0; }
+ul.cTriangleBullet { padding: 0; margin: 0 0 1.5rem -5px; }
+ul.cTriangleBullet li { list-style-type: none; position: relative; padding-left: 25px; }
+ul.cTriangleBullet li:before { content: "\25BA \0020"; font-size: 12px; position: absolute; left: 5px; color: #ff7300; }
+ul.cTriangleBullet li a { text-decoration: underline; }
+ul.cTriangleBullet li a:hover { text-decoration: underline; }
+ul.cTriangleBullet.cBottom { margin-bottom: 0; }
+
+ul.cTriangleSubBullet { padding: 0; margin: 1rem 0 1rem -5px; }
+ul.cTriangleSubBullet li { list-style-type: none; position: relative; padding-left: 25px; }
+ul.cTriangleSubBullet li:before { content: "\25BA \0020"; font-size: 12px; position: absolute; left: 5px; color: #999; }
+
+ul.cNoBottomMargin { margin-bottom: 0; }
+
+ul.cBorderBottom { list-style: none; padding: 0; margin: 0; }
+ul.cBorderBottom li { padding: 5px 0; border-bottom: solid 1px #ddd; }
+ul.cBorderBottom li a { text-decoration: underline; }
+ul.cBorderBottom li a:hover { text-decoration: underline; }
+ul.cBorderBottom li.cBottom { border-bottom: 0; }
+
+/* LINK STYLES */
+a, a:active, a:visited, a:focus { color: inherit; text-decoration: none; transition: all .2s; }
+p a { text-decoration: underline; }
+p a:hover { text-decoration: underline; }
+a.cMore { font-size: 1rem; font-weight: 700; text-decoration: none; letter-spacing: .085rem; }
+a.cHighlightedLink { color: #06c; }
+a.cMore.cBottom { margin-bottom: 1.75rem; display: inline-block; }
+a.cMore:hover { text-decoration: none; }
+a:hover { color: #ff7300; transition: all .2s; border-bottom: 0; }
+a.cButton { margin-right: 10px; display: inline-block; font-size: .9rem; font-weight: 500; padding: 8px 25px; background-color: #595B5F; color: #fff; text-transform: uppercase; letter-spacing: .05rem; transition: all .2s; text-decoration: none; text-align: center; }
+a.cButton.cBottom { margin-bottom: 0; }
+a.cButtonOutlined { border: solid 1px #999; }
+a.cButton.cWhite { background-color: #fff; color: #292929; transition: all .2s; }
+a.cButton.cWhite:hover { background-color: #fff; color: #ff7300; transition: all .2s; }
+a.cButton.cOrange { background-color: #ff7300; color: #fff; transition: all .2s; }
+a.cButton.cOrange:hover { background-color: #ff7300; color: #292929; transition: all .2s; }
+a.cButton:hover { background-color: #292929; color: #ff7300; transition: all .2s; text-decoration: none; }
+a.cArticle { display: inline-block; background-image: url(https://b.content.wso2.com/sites/all/2019-theme/images/icons/article.svg); background-position: left top 3px; background-repeat: no-repeat; padding: 0 0 0 32px; background-size: 22px; }
+a.cDownloadResourcelLink { display: inline-block; background-image: url(https://b.content.wso2.com/sites/all/2019-theme/images/icons/resource-download.svg); background-position: left top 3px; background-repeat: no-repeat; padding: 0 0 0 32px; background-size: 22px; }
+a.cNewPage { display: inline-block; background-image: url(https://b.content.wso2.com/sites/all/2019-theme/images/icons/new-page.svg); background-position: left top 3px; background-repeat: no-repeat; padding: 0 0 0 32px; background-size: 22px; }
+
+/* MENU STYLES */
+.navbar-default .navbar-nav > li > ul li a { font-size: 1em; font-weight: 300; letter-spacing: .05rem; }
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-text { letter-spacing: .025rem; }
+
+.cBottom, ul.cBottom  { margin-bottom: 0; }
+.cUnderline { border-bottom: solid 1.5px; padding-bottom: 1.3rem; }
+.cUnderlineWhite { border-bottom: solid 1px #fff; padding-bottom: 0.25rem; }
+.cUnderlineGrey { border-bottom: solid 1px #999; padding-bottom: 0.25rem; }
+.cUnderOrange { border-bottom: solid 1px #ff7300; }
+.cUppercase { text-transform: uppercase; letter-spacing: .05rem; }
+.cSentencecase { text-transform: none; letter-spacing: .018rem; }
+.cLargeText { font-size: 1.25rem; line-height: 1.75rem; }
+.cMediumText { font-size: 1.1rem; line-height: 1.6rem; }
+.cSmallText { font-size: .9rem; line-height: 1.4rem; }
+p.cSmallText { margin: 0 0 1rem; }
+.cReducedBottomMargin { margin-bottom: 0.5rem; }
+.cAddedBottomMargin { margin-bottom: 1.5rem; }
+.cOrangeColored { color: #ff7300; }
+.cImageBG { padding: 20px; text-align: center; background-image: url(https://b.content.wso2.com/sites/all/2019-theme/images/image-backgrounds/image-bg.svg); background-position: center center; background-repeat: repeat; background-size: cover; }
+.cImageBGDark { padding: 20px; text-align: center; background-image: url(https://b.content.wso2.com/sites/all/2019-theme/images/image-backgrounds/image-bg-dark.svg); background-position: center center; background-repeat: repeat; background-size: cover; }
+.cImageBGMedium { padding: 20px; text-align: center; background-image: url(https://b.content.wso2.com/sites/all/2019-theme/images/image-backgrounds/image-bg-medium.svg); background-position: center center; background-repeat: repeat; background-size: cover; }
+
+/* HEADER STYLES */
+.cHeader a.cButton { font-size: 1.3rem; font-weight: 500; padding: 12px 50px; background-color: #ff7300; color: #fff; letter-spacing: .05rem; margin-right: 15px; width: 100%; max-width: 260px; }
+.cHeader a.cButton:hover { background-color: #aaa; color: #fff; transition: all .2s; }
+.cHeader h2 { text-transform: uppercase; letter-spacing: .1rem; font-weight: 500; }
+.cHeader .cXlargeText { font-size: 1.5rem; line-height: 2rem; }
+.cHeader h3.cTagline, .cHeader h4.cTagline { font-weight: 300; margin: 0 0 3rem; }
+
+
+.cIntro h2 { font-size: 1.75rem; line-height: 2.5rem; }
+
+/* SECTION STYLES */
+section { padding: 4rem 0; }
+/* BACKGROUNDS */
+/* BLACK */
+.cBlackBG { background-color: #000; color: #eee; }
+.cBlackBG h1, .cBlackBG h2, .cBlackBG h3, .cBlackBG p, .cBlackBG ul li { font-weight: 300; }
+.cBlackBG .cUppercase { letter-spacing: .075rem; }
+.cBlackBG a.cButton { background-color: #ff7300; color: #fff; }
+.cBlackBG a.cButton:hover { background-color: #ff7300; color: #292929; transition: all .2s; }
+.cBlackBG a:hover { color: #ff7300; }
+
+/* WHITE */
+.cWhiteBG { background-color: #fff; color: #292929; }
+.cHighlighted.cWhiteBG h1, .cHighlighted.cWhiteBG h2, .cHighlighted.cWhiteBG h3, .cHighlighted.cWhiteBG p, .cHighlighted.cWhiteBG ul li { font-weight: 400; }
+.cWhiteBG a.cButton { background-color: #595B5F; color: #fff; }
+.cWhiteBG a.cButton:hover { background-color: #bbb; color: #292929; }
+.cWhiteBG a.cButtonOutlined { background-color: #fff; border: solid 1px #999; color: #292929; font-size: .8rem; font-weight: 700; padding: 7px 15px; }
+.cWhiteBG a.cButtonOutlined:hover { background-color: #444; color: #fff; border: solid 1px #292929; }
+.cCallout.cWhiteBG h1, .cCallout.cWhiteBG h2, .cCallout.cWhiteBG h3, .cCallout.cWhiteBG p, .cCallout.cWhiteBG ul li { font-weight: 400; }
+
+/* DARK GREY */
+.cDarkGreyBG { background-color: #292929; color: #eee; }
+.cDarkGreyBG h1, .cDarkGreyBG h2, .cDarkGreyBG h3, .cDarkGreyBG p, .cDarkGreyBG ul li { font-weight: 300; }
+.cDarkGreyBG .cUppercase { letter-spacing: .075rem; }
+.cDarkGreyBG a:hover { color: #ff7300; }
+
+/* LIGHT GREY */
+.cLightGreyBG { background-color: #efefef; }
+
+/* ORANGE */
+.cOrangeBG { background-color: #ff7300; color: #fff; }
+.cOrangeBG h1, .cOrangeBG h2, .cOrangeBG h3, .cOrangeBG p, .cOrangeBG ul li { font-weight: 300; }
+.cOrangeBG .cUppercase { letter-spacing: .075rem; }
+.cOrangeBG a.cButton { background-color: #fff; color: #ff7300; }
+.cOrangeBG a.cButton:hover { background-color: #292929; color: #fff; transition: all .2s; }
+.cOrangeBG a:hover { color: #292929; transition: all .2s; }
+
+/* HIGHTLIGHTED SECTIONS */
+.cHighlightedRow { margin: -8.75rem 0; position: relative; }
+.cHighlighted { padding: 3rem 4rem; -webkit-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.2); -moz-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.2); box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.2); }
+.cHighlightedReducePadding { padding: 2rem; }
+.cSectionAboveHighlight { padding-bottom: 9rem; }
+.cSectionBelowHighlight { padding-top: 8.75rem; }
+.cCallout { margin-top: -2rem; padding: 2rem; }
+.cCallout .cUnderline { border-bottom: solid 1.5px; padding-bottom: 1rem; }
+ul.cResources { margin: 0; padding: 0; list-style: none; }
+
+/* BLOCKS */
+.cContentBlockRight { padding-left: 1.5rem; padding-top: 1rem; }
+.cContentBlockLeft { padding-right: 1.5rem; padding-top: 1rem; }
+.cContentBlockMiddle { padding-right: 0.75rem; padding-left: 0.75rem; padding-top: 1rem; }
+
+/* QUOTES */
+.cQuoteOpen { display: inline-block; float: left; }
+.cQuote { margin-left: 20px; }
+p.cQuoteContent { font-size: 2.25rem; line-height: 3rem; margin: 2.5rem 0 3rem; font-weight: 300; }
+p.cQuoteContent.cSmall { font-size: 1.75rem; line-height: 2.5rem; }
+p.cPresenter { font-size: 1.75rem; line-height: 3rem; color: #ff7300; margin-bottom: 0; }
+p.cDesignation { font-size: 1rem; font-weight: 500; }
+
+/* CUSTOMER WIDGET */
+.cCustomers h2 { margin-bottom: 3rem; }
+.cCustomer img { -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */ filter: grayscale(100%); max-width: 140px; max-height: 70px; vertical-align: middle; }
+.cCustomer img.cReduceHeight { max-height: 50px; }
+.cCustomer img.cReduceHeightExtra { max-height: 35px; }
+.cCustomer a { display: inline-block; width: 140px; }
+.cCustomer a:hover { border-bottom: 0; }
+.cCustomer a:hover img { -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */ filter: grayscale(0%); }
+.cCustomer { padding: 20px; text-align: center; vertical-align: middle; display: inline-block; line-height: 80px; float: left; }
+.cCustomerHighlight h2 { line-height: 70px; }
+.cCustomerHighlight h2 img { max-width: 175px; max-height: 70px; vertical-align: middle; }
+.cCustomerHighlight p {  }
+
+/* PAGE FOOTER */
+.cPageFooter h4 { background-color: #efefef; padding: 7px 25px; display: block; }
+.cPageFooter .cEventDetail { -webkit-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.2); -moz-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.2); box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.2); padding: 20px 20px 17px; margin-bottom: 1rem; }
+.cPageFooter .cEventDetail  .cDate { padding-right: 20px; border-right: solid 1px #ff7300; text-align: center; display: inline-block; float: left; width: 100px; }
+.cPageFooter .cEventDetail  .cDate .cMonth { font-size: .9rem; text-transform: uppercase; letter-spacing: .05rem; line-height: 1.5rem; color: #434343; }
+.cPageFooter .cEventDetail  .cDate .cDay { font-size: 1.5rem; text-transform: uppercase; color: #ff7300; letter-spacing: .05rem; }
+.cPageFooter .cEventDetail  .cDate .cYear { font-size: .9rem; text-transform: uppercase; letter-spacing: .05rem; line-height: 1.5rem; color: #434343; }
+.cPageFooter .cEventDetail .cEventTitle { font-size: 1.15rem; line-height: 1.5rem; letter-spacing: .05rem; padding: 0 0 0 30px; margin-left: 100px; color: #434343; }
+.cPageFooter .cEventDetail .cEventTitle span.cPlace { font-size: .9rem; text-transform: uppercase; letter-spacing: .05rem; color: #ff7300; display: block; margin-top: .5rem; }
+.cPageFooter a:hover .cEventDetail { -webkit-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.4); -moz-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.4); box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.4); }
+
+/* BANNERS */
+.cBanner { padding: 2rem; }
+.cBanner h1, .cBanner h2, .cBanner h3, .cBanner h4 { margin-bottom: .5rem; }
+.cBanner p { margin-bottom: .75rem; }
+.cBannerHighlight { margin: 3rem 0; position: relative; padding: 3rem 3.5rem; -webkit-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.2); -moz-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.2); box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.2); }
+
+.cHighlightedForm { padding: 2rem; }
+.cImageContent { padding: 40px; }
+.cImageContent h2, .cImageContent h3, .cImageContent h4, .cImageContent h5 { text-align: left; }
+.cImageContent .cDisclaimer { text-align: left;; font-size: .85rem; color: #666; margin-top: 1.75rem; }
+.cImageContent .cDisclaimer p { margin-bottom: 0; }
+.cHighlightedContinuous { margin-bottom: 0; }
+.cContinuousDiv { padding-top: 0; }
+
+/* PRODUCT PAGE STYLES */
+.cHeader .cXlargeText { margin-bottom: 2.5rem; line-height: 2.5rem; }
+.cDocLinks { margin: 2rem 0; position: absolute; }
+
+a.cDownloadButton { background-image: none; }
+.cDownloads { padding-top: 0; margin-top: -14rem; position: relative; }
+.cDownloads .cGettingLatestVersion { margin-top: 30px; }
+.cDownloads a.download_btn { background-color: #ff7300; color: #fff; display: block; padding: 15px 0; cursor: pointer; margin-bottom: 15px; max-width: 260px; }
+.cDownloads a.download_btn:hover { color: #222; transition: all .3s; }
+.cDownloads a.download_btn .cInstallerType { padding-right: 0; padding-left: 20px; }
+.cDownloads a.download_btn .cDownloadIcon { font-size: 24px; margin-top: 3px; text-align: center; }
+.cDownloads a.download_btn .cOS { font-size: 20px; font-weight: 300; line-height: 20px;  }
+.cDownloads a.download_btn .cOStype { font-size: 14px; line-height: 14px; font-weight: 400; }
+.cDownloads a.download_tooling { background-color: #ff7300; color: #fff; display: block; padding: 15px 0; cursor: pointer; margin-bottom: 15px; max-width: 260px; }
+.cDownloads a.download_tooling:hover { color: #222; transition: all .3s; }
+.cDownloads a.download_tooling .cInstallerType { padding-right: 0; padding-left: 20px; }
+.cDownloads a.download_tooling .cDownloadIcon { font-size: 24px; margin-top: 3px; text-align: center; }
+.cDownloads a.download_tooling .cOS { font-size: 20px; font-weight: 300; line-height: 20px;  }
+.cDownloads a.download_tooling .cOStype { font-size: 14px; line-height: 14px; font-weight: 400; }
+
+a.cBookmark { display: inline-block; position: absolute; margin: -350px 0px 0px; }
+
+.cDownloads .cInstallationOptions { border-top: solid 1px #999; margin-top: 40px; }
+.cDownloads .cInstallationOptions h5 { background-color: #fff; padding-right: 10px; margin-top: -12px; display: inline-block; position: absolute; }
+.cDownloads .cInstallationOptions .cOptions { margin-top: 40px; }
+.cDownloads .cInstallationOptions .cOptions a.cInstallationOption { width: 260px; border: solid 1px #ccc; padding: 0 17px 0 80px; background-color: #fff; background-position: left 25px center; background-repeat: no-repeat; height: 60px; line-height: 60px; margin-bottom: 10px; display: inline-block; float: left; margin-right: 15px; }
+.cDownloads .cInstallationOptions .cOptions a.cInstallationOption:hover { color: #ff7300; transition: all .3s; -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35); -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35); box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35); transition: all .2s; }
+.cDownloads .cInstallationOptions .cOptions a.cAWS { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/aws.svg); background-size: 34px; }
+.cDownloads .cInstallationOptions .cOptions a.cKubernetes { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/kubernetes.svg); background-size: 38px; }
+.cDownloads .cInstallationOptions .cOptions a.cDocker { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/docker.svg); background-size: 44px; }
+.cDownloads .cInstallationOptions .cOptions a.cDockerCompose { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/docker-compose.svg); background-size: 42px; }
+.cDownloads .cInstallationOptions .cOptions a.cVegrant { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/vagrant.svg); background-size: 33px; }
+.cDownloads .cInstallationOptions .cOptions a.cHelm { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/helm.png); background-size: 42px; }
+.cDownloads .cInstallationOptions .cOptions a.cCentOS { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/centos.svg); background-size: 44px; }
+.cDownloads .cInstallationOptions .cOptions a.cWindowsX64 { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/windows.svg); background-size: 34px; }
+.cDownloads .cInstallationOptions .cOptions a.cUbuntu { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/ubuntu.svg); background-size: 40px; }
+.cDownloads .cInstallationOptions .cOptions a.cMacOS { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/mac.svg); background-size: 42px; }
+.cDownloads .cInstallationOptions .cOptions a.cApt { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/apt-icon.svg); background-size: 42px; }
+.cDownloads .cInstallationOptions .cOptions a.cYum { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/yum-icon.svg); background-size: 42px; }
+.cDownloads .cInstallationOptions .cOptions a.cPuppet { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/puppet-icon.svg); background-size: 40px; }
+.cDownloads .cInstallationOptions .cOptions a.cBrew { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/brew-icon.svg); background-size: 42px; }
+.cDownloads .cInstallationOptions .cOptions a.cAnsible { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/ansible-icon.svg); background-size: 38px; }
+.cDownloads .cInstallationOptions .cOptions a.cBinary { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/binary.svg); background-size: 36px; }
+.cDownloads .cInstallationOptions .cOptions a.cSource { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/source.svg); background-size: 38px; }
+
+.cDownloads .cOtherResources { border-top: solid 1px #999; margin-top: 40px; }
+.cDownloads .cOtherResources h5 { background-color: #fff; padding-right: 10px; margin-top: -12px; display: inline-block; position: absolute; }
+.cDownloads .cOtherResources .cResources { margin-top: 30px; }
+
+.cDownloads .cDocLinks { margin: 2rem 0 0; position: relative; }
+
+.cArrowContainer { text-align: center; max-width: 260px; }
+.cSelectedArrow { width: 0; height: 0; border-style: solid; border-width: 14px 18px 0 18px; border-color: #ff7300 transparent transparent transparent; margin: auto; }
+
+/* ROADMAP PAGE STYLES */
+.cRoadmapIntros { margin: 8rem 1rem 0; }
+.cRoadmapIntros ol { list-style-type: lower-alpha; margin: 0 0 1.25rem 1.25rem; padding: 0 0 0 0; }
+.cRoadmapIntros ol li { padding: 0 0 .5rem .5rem; font-size: 1rem; line-height: 1.6rem; font-weight: 400; letter-spacing: .018rem; }
+
+/* FEATURE PAGE STYLES */
+.cFeature h3 { margin: 0 2rem 0 0; }
+
+/* CASE STUDY STYLES */
+a.cContentButton { padding: 1rem; display: block; text-align: center; }
+a.cContentButton.cOrange { color: #fff; background-color: #ff7300; }
+a.cContentButton.cOrange:hover { color: #292929; }
+.cCustomerLogo { max-width: 225px; max-height: 60px; margin-bottom: 1rem; }
+
+@media screen and (max-width: 1200px) {
+  .cCustomerHighlight p {  }
+  a.cButton { margin-bottom: 15px; }
+  a.cButton.cDownloadButton, a.cButton.cCloudButton, a.cButton.cToolingButton { margin-bottom: 0; }
+}
+
+@media screen and (max-width: 992px) {
+  .cHighlightedRow { margin: 0; }
+  .cHighlighted, .cHighlightedReducePadding { padding: 3rem 3.5rem; }
+  .cHighlighted { margin-top: 1rem; }
+  .cSectionAboveHighlight { padding-bottom: 4rem; }
+  .cSectionBelowHighlight { padding-top: 4rem; margin-top: 0; }
+  .cCallout { margin-top: inherit; }
+  .cBannerHighlight { padding: 3rem 3.5rem; }
+  .cCustomerHighlight { margin-bottom: 2rem; }
+  .cCustomerHighlight h2 { height: auto; }
+  .cCustomerHighlight p {  }
+
+  .cDownloads { margin-top: -14rem; }
+  .cHeader a.cButton { margin-top: 1rem; }
+
+  .cContentBlockRight { padding-left: 0; padding-top: 1rem; }
+  .cContentBlockLeft { padding-right: 0; padding-top: 1rem; }
+  .cContentBlockMiddle { padding-right: 0; padding-left: 0; padding-top: 1rem; }
+
+  .cDownloads a.download_btn .cInstallerType { float: left; width: 80%; }
+  .cDownloads a.download_btn .cDownloadIcon { float: left; width: 20%; padding: 5px 15px 0 0; }
+}
+
+@media screen and (max-width: 768px) {
+  .cHighlighted, .cHighlightedReducePadding { padding: 2rem 2.5rem; }
+  .cBannerHighlight { padding: 2rem 2.5rem; }
+
+  .cDownloads { margin-top: -18.1rem; }
+  .cHeader a.cButton {  float: left; clear: both; }
+}
+
+@media screen and (max-width: 575px) {
+  .cHighlighted, .cHighlightedReducePadding { padding: 1.5rem 1.25rem; }
+  .cBannerHighlight { padding: 1.5rem 1.25rem; }
+  section, .cSectionAboveHighlight, .cSectionBelowHighlight { padding: 2.5rem .5rem; }
+  .cDownloads { padding: 0 .5rem 2.5rem; }
+  h1 { font-size: 2rem; line-height: 2.25rem; }
+  h2 { font-size: 1.5rem; line-height: 2rem; font-weight: 500; }
+  h3 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; }
+  h4 { font-size: 1.1rem; line-height: 1.6rem; font-weight: 500; }
+  p.cQuoteContent { font-size: 2rem; line-height: 2.75rem; margin: 2rem 0 3rem; }
+  p.cPresenter { font-size: 1.5rem; line-height: 2.75rem; }
+  p.cDesignation { font-size: 1rem; }
+  .cBannerHighlight { margin: 2.5rem 0 0; }
+  .cCustomers img { max-width: 100px; max-height: 50px; }
+  .cCustomer { padding: 20px 30px; text-align: center; vertical-align: middle; display: table-cell; height: 80px; width: 160px; float: left; }
+  .cCustomerHighlight h2 img { max-height: 50px; max-width: 125px; }
+  /* a.cButton.cDownloadButton { margin-bottom: 15px; } */
+}
+
+/* CLOUD PAGE STYLES */
+table.cPricingTableNew { width: 100%; }
+table.cPricingTableNew th {  }
+table.cPricingTableNew tr th , table.cPricingTableNew tr td { padding: 30px; text-align: center; border-left: 15px solid #fff; border-right: 15px solid #fff; width: 20%; }
+table.cPricingTableNew h3  {  }
+table.cPricingTableNew th p { margin-bottom: 0; margin-top: 0; }
+table.cPricingTableNew td { border-bottom: 1px solid #999; }
+table.cPricingTableNew td.cBottom { border-bottom: 0; }
+.cCircleMain { border-radius: 50%; width: 100px; height: 100px; display: inline-block; margin: auto; padding-top: 37px; float: none; color: #fff; font-weight: 800; font-size: 1.25rem; }
+.cCircleSub { width: 100%; margin-top: 20px; font-size: 1.2rem; font-weight: 500; }
+td.cFirstCol.cHover , td.cSecondCol.cHover , td.cThirdCol.cHover  , td.cForthCol.cHover , td.cFifthCol.cHover{ background-color: #fff; transition: all 1s ease 0s; }
+.cSlider { padding: 1.5rem 0; }
+.cSlider a.cSlideFullLink:hover { color: inherit; }
+.cQuote .cLogo { background-color: #fff; padding: 5px 10px; display: inline-block; }
+.cQuote .cLogo img { max-width: 200px; height: 64px; }
+.cSlider a.cLeftArrow { margin-left: 0px; }
+.cSlider a.cRightArrow { margin-right: 0px; }
+.cSlider .carousel-control { padding: 5px; margin-top: 70px; background-image: none; text-shadow: none; text-transform: uppercase; color: #000; background-color: #ccc; font-size: .8rem; width: 100px; height: 26px; font-weight: 500; letter-spacing: .05rem; }
+.cSlider .carousel-control { margin-top: 175px; }
+.cSlider .carousel-control.right {  }
+.cQuoteOpen { width: 25px; }
+p.cQuoteContent { font-size: 2.5rem; line-height: 3.5rem; margin: 0 0 2rem; font-weight: 300; }
+p.cQuoteContent { min-height: 175px; }
+.cQuote { margin-left: 35px; }
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; height: 325px; width: 96%; margin: 0 1em; }
+.VideoR-one { padding: 8em 0; background-position: center center; height: 325px; background-repeat: no-repeat; background-size: 100%; }
+.H-VideoBlock { text-align: center; display: block; }
+.embed-container { padding-bottom: 56%; height: 325px; overflow: hidden; max-width: 100%; margin: auto; }
+.H-VideoBlock h4 { text-align: left; margin-top: 1rem; font-weight: 400; min-height: 60px; }
+#bs-collapse .panel-heading-sla a::after { content: ' '; position: absolute; font-family: 'Material Icons'; right: 15px; transform: scale(0); transition: all 0.5s; color: #b7b7b7 !important; }
+.cIcon { background-repeat: no-repeat; background-position: left 10px center; padding: 50px; background-size: 45px; }
+.cSla { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/sla.svg); }
+.cSc { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/sc.svg); }
+.cDef { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/def.svg); }
+.cScsc { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/scsc.svg); }
+.cDp { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/dp.svg); }
+.cCsse { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/csse.svg); }
+.cMod { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/cloud-pages/images/mod.svg); }
+.panel-title-sla a { display: block; padding: 15px 15px 15px 75px; position: relative; font-weight: 400; }
+.panel-heading-sla a::before { content: '\e146'; position: absolute; font-family: 'Material Icons'; right: 15px; transition: all 0.5s; transform: scale(1); color: #b7b7b7; font-size: 1.5rem; }
+.panel-heading-sla.active a::before { content: ' '; transition: all 0.5s; transform: scale(0); }
+#bs-collapse .panel-heading-sla.active a::after { content: '\e909'; transform: scale(1); transition: all 0.5s; font-size: 1.5rem; }
+h4.panel-title-sla { margin: 0; font-size: 1rem; line-height: 1.5rem; }
+.panel-body-col { padding: 0 40px 0 75px; }
+
+@media screen and (max-width: 992px) {
+  p.cQuoteContent { min-height: 200px; }
+  .cSlider .carousel-control { margin-top: 20px; opacity: .4; }
+}
+@media screen and (max-width: 768px) {
+  p.cQuoteContent { min-height: 250px; }
+}
+
+/* INSTALL OPTIONS */
+.cPrerequisites { margin-bottom: 1.5rem; border-bottom: solid 1px #ccc; }
+.cStepNo { width: 32px; font-size: 14px; line-height: 28px; height: 32px; border: solid 2px #999; color: #333; border-radius: 18px; float: left; margin-right: 15px; text-align: center; }
+.cStepContent { margin-left: 45px; }
+li.cSideLinkDownload { display: none; }
+li.cSideLinkManagedCloud { display: none; }
+.cInstallerHeader h3 { margin: 0 0 5px; }
+/* .cInstallOptions { padding: 10px 0 0; } */
+h2.cAWS { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/aws.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 15px 0 20px 75px; min-height: 90px; }
+h2.cDocker { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/docker.svg); background-position: left top; background-repeat: no-repeat; background-size: 64px; padding: 0 0 20px 75px; min-height: 70px; }
+h2.cDockerCompose { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/docker-compose.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 15px 0 20px 75px; min-height: 90px; }
+h2.cVagrant { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/vagrant.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 15px 0 20px 75px; min-height: 90px; }
+h2.cAPT { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/apt-icon.svg); background-position: left top 7px; background-repeat: no-repeat; background-size: 75px; padding: 0 0 20px 90px; min-height: 70px; }
+h2.cYUM { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/yum-icon.svg); background-position: left top 5px; background-repeat: no-repeat; background-size: 75px; padding: 0 0 20px 90px; min-height: 70px; }
+h2.cBREW { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/brew-icon.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 10px 0 20px 70px; min-height: 80px; }
+h2.cPUPPET { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/puppet-icon.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 5px 0 20px 70px; min-height: 80px; }
+h2.cANSIBLE { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/ansible-icon.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 7px 0 20px 70px; min-height: 80px; }
+h2.cKubernetes { background-image:url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/kubernetes.svg); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 7px 0 20px 70px; min-height: 80px; }
+h2.cHelm { background-image:url(https://b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/helm.png); background-position: left top; background-repeat: no-repeat; background-size: 56px; padding: 7px 0 20px 70px; min-height: 80px; }
+
+.cInstallOptions a.cInstallButton { transition: all .3s; background-color: #fff; width: 220px; height: 50px; border: solid 1px #bbb; text-align: center; display: block; margin: 0 25px 20px 0; float: left; background-color: #f2f2f2; }
+a.cInstallButton .cAWSstack { display: inline-block; margin-top: 0; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/aws-stack.svg); background-repeat: no-repeat; background-position: left center; padding: 0 0 0 50px; height: 45px; line-height: 45px; background-size: 40px; font-weight: 300; font-size: 16px; }
+
+a.cInstallButton .cKubernetes { display: inline-block; margin-top: 20px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/kubernetes.svg); background-repeat: no-repeat; background-position: left center; padding: 0 0 0 52px; }
+a.cInstallButton.cSideLink .cKubernetes { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 45px; background-position: left 3px center; }
+a.cInstallButton .cAWS { display: inline-block; margin-top: 17px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/aws.svg); background-repeat: no-repeat; background-position: left center; padding: 0 0 0 50px; height: 45px; line-height: 45px; }
+a.cInstallButton.cSideLink .cAWS { padding: 0 0 0 55px; background-size: 35px; margin: 0; line-height: 45px; background-position: left 7px center; }
+a.cInstallButton .cDocker { display: inline-block; margin-top: 20px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/docker.svg); background-repeat: no-repeat; background-position: left center; padding: 0 0 0 70px; }
+a.cInstallButton .cDockerCompose { display: inline-block; margin-top: 10px; text-align: left; line-height: 22px; height: 55px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/docker-compose.svg); background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 60px; }
+a.cInstallButton .cVagrant { display: inline-block; margin-top: 17px; height: 43px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/vagrant.svg); background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 50px; }
+a.cInstallButton .cWSO2Cloud { display: inline-block; margin-top: 10px; text-align: left; line-height: 22px; height: 55px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/wso2-cloud.svg); background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 75px; }
+a.cInstallButton .cBinary { display: inline-block; margin-top: 17px; height: 43px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/binary.svg); background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 55px; }
+a.cInstallButton .cSource { display: inline-block; margin-top: 17px; height: 43px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/source.svg); background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 55px; }
+a.cInstallButton .cAPT { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/apt-icon.svg); background-repeat: no-repeat; display: inline-block; margin-top: 27px; height: 26px; background-repeat: no-repeat; background-position: left center; padding: 0 0 0 71px; }
+a.cInstallButton .cYUM { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/yum-icon.svg); background-repeat: no-repeat; display: inline-block; margin-top: 26px; height: 26px; background-repeat: no-repeat; background-position: left center; padding: 0 0 0 70px; }
+a.cInstallButton .cBREW { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/brew-icon.svg); background-repeat: no-repeat; display: inline-block; margin-top: 17px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 7px 0 0 50px; }
+a.cInstallButton .cPUPPET { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/puppet-icon.svg); background-repeat: no-repeat; display: inline-block; margin-top: 17px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 7px 0 0 50px; }
+a.cInstallButton .cANSIBLE { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/ansible-icon.svg); background-repeat: no-repeat; display: inline-block; margin-top: 16px; height: 48px; background-repeat: no-repeat; background-position: left center; padding: 7px 0 0 56px; }
+a.cInstallButton .cMacOS { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/mac.svg); display: inline-block; margin-top: 12px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 55px; }
+a.cInstallButton .cUbuntu { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/ubuntu.svg); background-repeat: no-repeat; display: inline-block; margin-top: 12px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 65px; }
+a.cInstallButton .cCentOS { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/centos.svg); background-repeat: no-repeat; display: inline-block; margin-top: 12px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 65px; }
+a.cInstallButton .cHelm { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/helm.png); background-repeat: no-repeat; display: inline-block; margin-top: 12px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 65px; }
+a.cInstallButton .cWindows { background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products-2018/common/installer/images/windows.svg); background-repeat: no-repeat; display: inline-block; margin-top: 12px; height: 50px; background-repeat: no-repeat; background-position: left center; padding: 5px 0 0 65px; }
+a.cInstallButton .cKubernetes { display: inline-block; margin-top: 20px; background-image: url(//b.content.wso2.com/sites/all/2017-d7-theme/products/common/installer/images/kubernetes.svg); background-repeat: no-repeat; background-position: left center; padding: 0 0 0 52px; }
+
+a.cInstallButton.cSideLink .cDocker { padding: 0 0 0 55px; background-size: 45px; margin: 0; line-height: 45px; }
+a.cInstallButton.cSideLink .cDockerCompose { padding: 0 0 0 55px; background-size: 45px; margin: 0; height: 47px; line-height: 47px; }
+a.cInstallButton.cSideLink .cVagrant { padding: 0 0 0 55px; background-size: 30px; margin: 0; line-height: 45px; background-position: left 8px center; }
+a.cInstallButton.cSideLink .cWSO2Cloud { padding: 0 0 0 55px; background-size: 45px; margin: 0; line-height: 45px; height: auto; }
+a.cInstallButton.cSideLink .cBinary { padding: 0 0 0 55px; background-size: 33px; margin: 0; line-height: 45px; background-position: left 7px center; }
+a.cInstallButton.cSideLink .cSource { padding: 0 0 0 55px; background-size: 35px; margin: 0; line-height: 45px; background-position: left 7px center; }
+a.cInstallButton.cSideLink .cWum { padding: 7px 0 0 55px; background-size: 37px; margin: 0; background-position: left 7px top 11px; height: auto; }
+a.cInstallButton.cSideLink .cKubernetes { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 45px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cHelm { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 50px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cWindows { padding: 0 0 0 55px; background-size: 35px; margin: 0; line-height: 50px; background-position: left 5px center; }
+a.cInstallButton.cSideLink .cCentOS { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 50px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cMacOS { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 50px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cUbuntu { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 50px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cAPT { padding: 0 0 0 55px; background-size: 48px; margin: 0; line-height: 25px; background-position: left center; }
+a.cInstallButton.cSideLink .cYUM { padding: 0 0 0 55px; background-size: 48px; margin: 0; line-height: 28px; background-position: left center; }
+a.cInstallButton.cSideLink .cBREW { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 53px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cPUPPET { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 50px; background-position: left 3px center; }
+a.cInstallButton.cSideLink .cANSIBLE { padding: 0 0 0 55px; background-size: 40px; margin: 0; line-height: 50px; background-position: left 3px center; }
+
+
+.cOtherOptions ul.cVerticleList li { min-height: 65px; line-height: 65px; padding: 0; margin: 0; }
+
+code, pre { font-family: monospace,monospace; font-size: 14px; padding: 20px; line-height: 24px; }
+.cCode { border: solid 1px #ececec; margin: 20px 0 20px 0; }
+
+.cInstall .cOtherOptions h3 { text-transform: uppercase; font-size: 1.25rem; }
+.cFAQ { margin-top: 2rem; padding-top: 2rem; border-top: solid 1px #ccc; }
+
+@media screen and (max-width: 575px) {
+  h2.cAWS { background-position: left top; background-size: 45px; padding: 15px 0 20px 55px; min-height: auto; }
+  h2.cDocker { background-position: left top; background-size: 45px; padding: 0 0 20px 55px; min-height: auto; }
+  h2.cDockerCompose { background-position: left top; background-size: 56px; padding: 15px 0 20px 75px; min-height: auto; }
+  h2.cVagrant { background-position: left top; background-size: 56px; padding: 15px 0 20px 75px; min-height: auto; }
+  h2.cAPT { background-position: left top 7px; background-size: 50px; padding: 0 0 20px 60px; min-height: auto; }
+  h2.cYUM { background-position: left top 5px; background-size: 50px; padding: 0 0 20px 60px; min-height: auto; }
+  h2.cBREW { background-position: left top; background-size: 45px; padding: 10px 0 20px 55px; min-height: auto; }
+  h2.cPUPPET { background-position: left top; background-size: 40px; padding: 5px 0 20px 45px; min-height: auto; }
+  h2.cANSIBLE { background-position: left top; background-size: 45px; padding: 7px 0 20px 55px; min-height: auto; }
+
+}
+
+/* DOWNLOAD THANK YOU PAGES */
+.cDownloadThankyouLinks table td.cLeft { width: 20%; padding: 10px 10px 10px 0; vertical-align: middle; text-align: left; }
+.cDownloadThankyouLinks table td.cRight { width: 80%; padding: 10px 0 10px 10px; vertical-align: middle; text-align: left; }
+.cDownloadThankyouLinks table { margin-bottom: 30px; }
