@@ -1,0 +1,134 @@
+body {
+    /* background: #999999; */
+    padding-top:0px;
+    background-image: url(../img/obbg-green.jpg);
+    background-size: 100%;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row.cNavRow {
+    /* padding: 0;
+    margin: 0;
+    background-color: #ffff; */
+}
+
+.cOBsliderContainer {
+    /* height: 390px; */
+}
+
+
+.cIntroSection {
+
+
+
+}
+
+.cTopPadding {
+    padding-top: 10rem;
+}
+
+.navbar-brand img {
+    width:150px;
+}
+
+ul.cFloatRight {
+    float: right !important;
+}
+
+.cArrows {
+  
+}
+
+
+.cFuntionBox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 375px;
+}
+.cFuntionBox img {
+	margin-bottom: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    /* max-height: 300px; */
+}
+
+/* .cSliderContent , .cSliderImage {
+    width: 50%;
+    float: left;
+} */
+
+.cPhone {
+    width: 350px;
+    height: 500px;
+}
+
+.cArrows {
+
+    display: inline-block;
+    height: 100px;
+    background: red;
+    top: 20%;
+
+
+
+	padding: 5px;
+	margin-top: 70px;
+	background-image: none;
+	text-shadow: none;
+	text-transform: uppercase;
+	color: #000;
+	background-color: #ccc;
+	font-size: .8rem;
+	width: 100px;
+	height: 26px;
+	font-weight: 500;
+	letter-spacing: .05rem;
+}
+
+.cOBslider {
+    min-height: 290px;
+}
+
+.cOBslider h2 , .cOBslider p {
+    color: #ffffff;
+}
+
+
+.cSliderContent a.cButton {
+
+    display: inline-block;
+    float: left;
+    margin-right: 10px ;
+    background: #000;
+    font-size: 1.1rem;
+}
+
+.cFooter {
+    background: #fff;
+    padding: 1rem 0;
+}
+
+.section-nav {
+   
+   
+position: fixed;
+    padding: 3rem 4rem;
+    background-color:#fff;
+
+color:#292929;
+display: inline-block;
+left: 0;
+top: 525px;
+margin: 0;
+
+    
+}
+
+
+.toc-h1 {
+    font-weight: 800;
+}
