@@ -1,6 +1,7 @@
 ---
 layout: ob-base-toc-page
 title: Concepts
+intro: Learn the core concepts of Open Banking
 toc: true
 ---
 
