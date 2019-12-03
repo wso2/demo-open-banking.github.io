@@ -132,36 +132,14 @@ margin: 0;
     padding-bottom: 4rem;
 }
 
-
-.toc-h1 {
-    font-weight: 800;
+h1.cReducedBottomMargin {
+    color: #fff;
 }
 
 
-.cTocContent * {
-    display: none;
-}
-.cTocContent .ctoccontainer , .cTocContent .ctoccontainer * {
-display: block;
-} 
+/* TOC */
 
-
-
-ul.section-nav {
-	position: absolute;
-	left: -360px;
-	top: 10px;
-	padding: 0 20px 0  0;
-    margin: 0;
-    border-right: 1px solid #6fca6d;
-    /* height: 100vh; */
-    float: left;
-    width: 300px;
-}
-
-
-ul.section-nav.stick {
-    position: fixed;
-    top: 60;
-    left: 40;
-}
+/* .cTocConatiner ul {
+padding: 0;
+margin: 0;
+} */

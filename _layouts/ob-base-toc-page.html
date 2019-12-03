@@ -51,14 +51,14 @@
     <div class="container">
         <div class="row">
       
-            <div class="col-sm-12 col-md-4 col-lg-4 cPagecontent">
+            <div class="col-sm-12 col-md-3 col-lg-3 cTocConatiner">
                 
-                {{ toc }}
+                {% include toc.html html=content %}
             </div>
 
-                <div class="col-sm-12 col-md-8 col-lg-8 cPagecontent">
+                <div class="col-sm-12 col-md-9 col-lg-9 cPagecontent">
                     <div class=" cWhiteBG cAddedBottomMargin">
-                        {{ content | toc }}
+                        {{ content }}
                         <div class="clearfix"></div>
                     </div>       
                 </div>
@@ -102,21 +102,21 @@
 
 
 
-//  $(window).scroll(function() {
-//     if ($(this).scrollTop() > 250) {
-//         $('.section-nav').addClass('stick');
+ $(window).scroll(function() {
+    if ($(this).scrollTop() > 250) {
+        $('.cTocConatiner ul').addClass('stick');
     
      
 
-//     } else {
+    } else {
 
-//         $('.section-nav').removeClass('stick');
+        $('.cTocConatiner ul').removeClass('stick');
       
   
-//     }
+    }
     
 
-// });
+});
 
 
 
