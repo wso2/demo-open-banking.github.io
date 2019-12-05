@@ -11,22 +11,17 @@ Learn the key concepts behind Open Banking, its stakeholders, and the technologi
 
 ## Open Banking
 
-The global financial services market is oligopolistic in nature. A few key players get to define market dynamics and the rate of innovation. Banks have the sole ownership of the customer data and they have the power to decide on the quality of services that the customer experiences.
-
 Open banking has been introduced to make banking a more competitive business. Its main goals are offering greater financial transparency, a shared chance of success for all financial service providers, and more innovative services to the consumers. 
 
-## Payment Service Directives
+The current banking practice involves the customer or merchant to maintain separate relationships with different financial institutions in order to achieve their financial goals. Open banking introduces a more consolidated experience to the customer by allowing banks to expose their functionality via APIs.
 
-The Payment Services Directives, also known as PSD and PSD2, are two pieces of legislation (European Union directives) administered by the European Commission (Directorate General Internal Market) to regulate payment services and payment service providers throughout the European Union and European Economic Area (EEA).
+## PSD2
 
-### PSD2
+PSD2 is the revised Payment Service Directive legislation administered by the European Commission and mandated in 2009. PSD2 requires Europe's banks to give regulated third-party providers (TPPs) access to customers' account information and payment initiation with the customers' permission and consent.
 
+Benefits of PSD2 include:
 
-PSD2 is the revised Payment Service Directive, which was mandated in 2016. It stems from PSD1, which was mandated in 2009. PSD2 requires Europe's banks to give regulated third-party providers (TPPs) access to customers' account information and payment initiation with the customers' permission and consent.
-
-Some of the benefits of PSD2 include:
-
-- The customers can manage their finances using third-party applications. For example, pay your bills using social media accounts.
+- Customers can manage their finances using third-party applications. For example, pay your bills using social media accounts.
 - More consumer choices and better online and mobile payment methods.
 - More opportunities for financial technology companies to introduce new and innovative banking services.
 - Enhanced payment security.
@@ -64,7 +59,7 @@ Following are the categories of stakeholders that actively participate in Open B
 
     Card Based Payment Instrument Issuer (CBPII) is a PSP (ASPSP/TPP) that issues payment instruments based on cards. Those cards can be used to initiate a payment transaction between an ASPSP and another PSP. 
 
-- Fintech: Fintech is another name for financial technology and is used to refer to a business that offers new and innovative financial services using software and modern technology.
+- Fintech: Fintech is another name for financial technology and is often used to refer to a business that offers new and innovative financial services using software and modern technology.
 
   Fintechs thrive to offer various financial services like money transfers, payments, and lending in fast and easy ways to keep up with the requirements of the modern-day, tech-savvy, digitally advanced customers. Due to this reason, Fintechs have become quite a competitive challenge to banks that have more rigid, process-oriented structures.
 
@@ -73,7 +68,7 @@ Third-Party Providers (TPPs) can create third-party applications to facilitate b
 
 <img src="/img/tpp.png" width="600">
 
-Before getting TPPs connected with the banks and onboard, they are subjected to thorough verification. This verification includes a comprehensive sign-up process at the API Store; the developer portal of WSO2 Open Banking. For a TPP to start providing open banking services, it has to be registered under a Competent Authority, which is a regulatory body that authorizes and supervises the open banking services delivered by the TPP.
+The TPPs are subject to thorough verification before connecting them with the banks/ASPSPs. This verification includes a comprehensive sign-up process at the API Store; the developer portal of WSO2 Open Banking. For a TPP to start providing open banking services, it has to be registered under a Competent Authority, which is a regulatory body that authorizes and supervises the open banking services delivered by the TPP.
 
 ### Consent Management
 Consent management ensures that the following scenarios take place with the consent of the respective PSU:
@@ -81,13 +76,13 @@ Consent management ensures that the following scenarios take place with the cons
 - Processing online payments on behalf of PSUs by PISPs
 
 ## Consumer Data Right
-The Australian Government is introducing a Consumer Data Right (CDR) to give consumers more control over their data. Such as providing customers and small businesses choice about how their data is shared with third parties and sets standards for a whole industry about what data should be made available, safely. In doing so, CDR encourages competition between service providers, leading to better prices for customers and more innovative products and services.
+The Australian Government introduced the Consumer Data Right (CDR) to give consumers more control over their data. CDR provides customers and small businesses a choice about how their data is shared with third parties and sets standards for a whole industry about what data should be made available, safely. In doing so, CDR encourages competition between service providers, leading to better prices for customers and more innovative products and services.
 
 The CDR will be rolled out sector-by-sector, starting with the banking sector. Further information on the CDR is available on the Treasury website at https://treasury.gov.au/consumer-data-right.
 
 ### Consumer Data Standards
 
-The Consumer Data Standards (CDS) have been developed as part of the Australian Government's introduction of the CDR legislation to give Australians greater control over their data. These standards enable consumers to access and direct the sharing of data about them with third parties flexibly and simply, and in ways that ensure security and trust in how that data is being accessed and used.
+The Consumer Data Standards (CDS) are the technical standards produced by Data61, which is the Data Standards Body that provides guidance for the banks/Data Holders on how to implement the CDR. These standards enable consumers to access and direct the sharing of data about them with third parties flexibly and simply, and in ways that ensure security and trust in how that data is being accessed and used.
 
 ### Stakeholders
 
@@ -101,7 +96,7 @@ Following are the key actors related to CDR context:
 
 Data Recipients (DRs) can create applications to facilitate banking services exposed via Bank APIs. 
 
-Before getting DRs connected with the Data Holders (banks) and onboard, they are subjected to thorough verification. This verification includes a comprehensive sign-up process at the API Store, the developer portal of WSO2 Open Banking. For a DR to start providing open banking services, it has to be registered under ACCC.
+The DRs are subject to thorough verification before connecting them with the banks/Data Holders. This verification includes a comprehensive sign-up process at the API Store, the developer portal of WSO2 Open Banking. For a DR to start providing open banking services, it has to be registered under the Australian Competition and Consumer Commission (ACCC).
 
 ## APIs
 
@@ -138,10 +133,10 @@ WSO2 Open Banking facilitates adding documentation to APIs. API documentation he
 
 ### API Throttling
 Throttling allows you to limit the number of successful hits to an API during a given period of time, typically in cases such as the following:
+- To protect your APIs from common types of security attacks such as denial of service (DoS)
+- To regulate traffic according to infrastructure availability
+- To make an API, application, or a resource available to a consumer at different levels of service
 
-To protect your APIs from common types of security attacks such as denial of service (DoS)
-To regulate traffic according to infrastructure availability
-To make an API, application, or a resource available to a consumer at different levels of service, usually for monetization purpose
 WSO2 Open Banking enables defining throttling at the API, application, and resource levels. The final request limit granted to a given user for a given API is ultimately defined by the consolidated output of all the applicable throttling tiers. The throttling tiers are also referred to as Service-level agreements (SLAs).
 
 ### OpenAPI Specification
@@ -167,22 +162,19 @@ WSO2 Open Banking comes with a pre-created default application, which allows unl
 ## Security
 Security refers to the means through which computer systems are protected from damage and disruption without being compromised to risks and vulnerabilities. WSO2 Open Banking implements security at the application level and transport level.
 
-WSO2 Open Banking implements security at the application level and transport level.
-
 - Application-level Security: Application-level security refers to the security requirements at the application level such as encryption, authentication, and authorization.
 - Transport-level Security: Transport-level security (TLS) is a mechanism that secures internet and intranet communications. WSO2 Open Banking uses certificates, and keystores to implement transport-level security.
 
 ### Encryption
 Encryption is the process of translating/encoding data/messages (plaintext) using an algorithm (cipher) into a secret code (ciphertext) that can only be accessed by authorized entities with a secret key or a password.
 
-### Authentication
+### User Authentication
 Authentication is the process used to distinctly identify a certain entity using the following factors:
 - Knowledge factor: This is something the user knows. For example, password, PIN, and security question.
 - Possession factor: This is something the user has. For example, ATM card, identity card, mobile phone, and security token.
 - Inherence factor: This is something the user is/does. For example, fingerprint and voice pattern.  
 
 Authentication is implemented in either of the following forms:
-- Single-factor Authentication: This mechanism utilizes a single factor to authenticate an entity. 
 - Multi-factor Authentication: Multi-factor authentication (MFA) utilizes two or more factors to authenticate an entity.
 - Two-factor Authentication: Two-factor authentication (2FA) is a subset of MFA. It utilizes two factors to authenticate an entity.
 - Strong Customer Authentication: Strong customer authentication (SCA) is another name for 2FA and MFA. It simply means that two or more elements are used to authenticate a user. These elements are based on the same categories used in MFA: customer's knowledge, possession, and inherence. The idea is that these elements are independent so that the breach of one does not compromise the others.
@@ -211,19 +203,10 @@ Access tokens authenticate API users and applications, and ensure better securit
 Access tokens grant access to protected API resources. The level of access granted by each access token is determined by the method (known as grant type) used to generate the access token. There are several grant types used in WSO2 Open Banking:
 
 - Authorization Code: This grant type enables obtaining a code using the username and the password. You can generate an access token using this code.
-- Implicit: This grant type is similar to the code grant type, but instead of generating a code, this directly provides the access token.
-- Password: This grant type authenticates the user using the password provided upon which an access token is generated.
 - Client Credential: This grant type enables creating an access token using the client key and client secret.
 - Refresh Token: This grant type enables to regenerate an access token once the originally provided access token gets expired.
-- SAML: Security Assertion Markup Language (SAML) is an open standard for exchanging authentication and authorization data between parties, in particular, between an identity provider and a service provider. This grant type uses SAML to obtain the access token.
-- IWA-NTLM: This grant type is similar to the password grant type, but it is specific to Microsoft Windows users.
 
 ### Certificates
 A certificate (also known as an SSL certificate or digital certificate) is an encryption tool issued by a trusted certification authority (CA) that encrypts data transmitted between a client and a server. Certificates are used for public-key encryption in Public Key Infrastructure (PKI).
 
 In WSO2 Open Banking a TPP must forward a certificate to the ASPSP so that when the TPP sends an application access token request, the ASPSP can verify the authenticity of the request using the shared certificate. A keystore is a repository that contains multiple certificates.
-
-### CORS
-Cross-Origin Resource Sharing (CORS) is a mechanism that allows accessing restricted resources, such as fonts, images, scripts, videos, and iframes from domains outside the domain from which the requesting resource originated.
-
-By default, web browsers apply the same-origin policy to avoid interactions between different origins. CORS defines a way in which a browser and a server can interact to determine whether or not it is safe to allow the cross-origin requests.
