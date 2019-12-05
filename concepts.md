@@ -48,14 +48,14 @@ Following are the categories of stakeholders that actively participate in Open B
    
    The AISPs can also provide the facility to analyze the customer's spending patterns, expenses, and financial needs. Unlike a PISP, an AISP cannot transfer funds from a payment account. The following diagram depicts a generic AISP flow:
 
-   <img src="img/aisp.png" width="400">
+   <img src="/img/aisp.png" width="400">
 
   To view a live demo of the AISP flow of events, see [AISP demo.](https://openbanking.wso2.com/demos/aisp)
 - PISP: A Payment Initiation Service Provider (PISP) provides an online service to initiate a payment order at the request of the PSU (a bank customer) with respect to a payment account held at another PSP. To provide this facility PISPs should be authorized by the customer to proceed with the payment. PISPs are responsible for the transaction flow starting from the moment a customer inputs the payment details to the moment the funds appear in the merchant's bank account.
 
   The following diagram depicts a generic PISP flow:
 
-  <img src="img/pisp.png" width="400">
+  <img src="/img/pisp.png" width="400">
 
   To view a live demo of the PISP flow of events, see [PISP demo.](https://openbanking.wso2.com/demos/pisp)
 
@@ -71,7 +71,7 @@ Following are the categories of stakeholders that actively participate in Open B
 ### TPP Onboarding
 Third-Party Providers (TPPs) can create third-party applications to facilitate banking services exposed via banking APIs. A TPP can play the role of a PISP/AISP/CBPII or a combination of those roles.
 
-<img src="img/tpp.png" width="600">
+<img src="/img/tpp.png" width="600">
 
 Before getting TPPs connected with the banks and onboard, they are subjected to thorough verification. This verification includes a comprehensive sign-up process at the API Store; the developer portal of WSO2 Open Banking. For a TPP to start providing open banking services, it has to be registered under a Competent Authority, which is a regulatory body that authorizes and supervises the open banking services delivered by the TPP.
 
@@ -155,7 +155,7 @@ WSO2 Open Banking API Manager supports [Open API 3.0](https://github.com/OAI/Ope
 ## Applications
 An application is an intermediary that sits between an API and its consumer. API consumers use applications to subscribe to APIs and consume them.
 
-<img src="img/applications.png" width="500">
+<img src="/img/applications.png" width="500">
 
 An API consumer can subscribe to multiple APIs using a single application. Thus, it acts as a logical collection of API subscriptions and decouples the API consumer from the APIs. Each application can be associated with different Service Level Agreement (SLA) levels. This is enabled by attaching an application with throttling tiers that determine the maximum number of API calls allowed during a given duration.
 

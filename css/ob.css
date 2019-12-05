@@ -1,60 +1,72 @@
 body {
-    /* background: #999999; */
-    padding-top:0px;
-    background-image: url(../img/obbg-green.jpg);
-    background-size: 100%;
+	/* background: #999999; */
+	padding-top: 0px;
+	background-image: url(../img/obbg-green.jpg);
+	background-size: 100%;
 }
+
 .row {
-    margin-left: 0;
-    margin-right: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
+
 .row.cNavRow {
-    /* padding: 0;
+	/* padding: 0;
     margin: 0;
     background-color: #ffff; */
 }
 
 .cOBsliderContainer {
-    /* height: 390px; */
+	/* height: 390px; */
 }
 
+.cSliderContent {
+	padding-left: 0;
+}
 
-.cIntroSection {
+.cIntroSection {}
 
+.cIntroSection.cTitle p {
+	color: #fff;
+}
 
-
+.carousel-indicators {
+	bottom: -40px;
 }
 
 .cTopPadding {
-    padding-top: 10rem;
+	padding-top: 10rem;
+}
+
+.navbar-brand {
+	padding-left: 15px;
 }
 
 .navbar-brand img {
-    width:150px;
+	width: 150px;
 }
 
 ul.cFloatRight {
-    float: right !important;
+	float: right !important;
 }
 
-.cArrows {
-  
-}
-
+.cArrows {}
 
 .cFuntionBox {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    min-height: 375px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	min-height: 375px;
 }
+
 .cFuntionBox img {
 	margin-bottom: 20px;
 }
 
 .carousel-item img {
-    width: 100%;
-    /* max-height: 300px; */
+	width: 100%;
+	/* max-height: 300px; */
 }
+
 
 /* .cSliderContent , .cSliderImage {
     width: 50%;
@@ -62,19 +74,15 @@ ul.cFloatRight {
 } */
 
 .cPhone {
-    width: 350px;
-    height: 500px;
+	width: 350px;
+	height: 500px;
 }
 
 .cArrows {
-
-    display: inline-block;
-    height: 100px;
-    background: red;
-    top: 20%;
-
-
-
+	display: inline-block;
+	height: 100px;
+	background: red;
+	top: 20%;
 	padding: 5px;
 	margin-top: 70px;
 	background-image: none;
@@ -90,27 +98,29 @@ ul.cFloatRight {
 }
 
 .cOBslider {
-    min-height: 290px;
+	min-height: 290px;
 }
 
-.cOBslider h2 , .cOBslider p {
-    color: #ffffff;
+.cOBslider h2,
+.cOBslider p {
+	color: #ffffff;
 }
-
 
 .cSliderContent a.cButton {
-
-    display: inline-block;
-    float: left;
-    margin-right: 10px ;
-    background: #000;
-    font-size: 1.1rem;
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	background: #000;
+	font-size: 1.1rem;
+	max-width: 200px;
+	padding: 12px 30px;
 }
 
 .cFooter {
-    background: #fff;
-    padding: 1rem 0;
+	background: #fff;
+	padding: 1rem 0;
 }
+
 
 /* .section-nav {
    
@@ -127,19 +137,76 @@ margin: 0;
 
      */
 
-
 .cSectionAboveHighlight.cTitle {
-    padding-bottom: 4rem;
+	padding-bottom: 4rem;
 }
 
 h1.cReducedBottomMargin {
-    color: #fff;
+	color: #fff;
+}
+
+
+/* NAVIGATION */
+
+.nav-link {
+	color: #fff !important;
 }
 
 
 /* TOC */
 
-/* .cTocConatiner ul {
-padding: 0;
-margin: 0;
-} */
+.cTocConatiner li {
+	list-style: none;
+	/* border-left: 1px solid green; */
+}
+
+.cTocConatiner li {
+	font-weight: 700;
+}
+
+.cTocConatiner li li {
+	font-weight: 600;
+}
+
+.cTocConatiner li li li {
+	font-weight: 400;
+}
+
+.cTocConatiner ul {
+	padding-top: 10px;
+	/* margin-right: 40px; */
+	margin: 0;
+}
+
+.cTocConatiner ul ul {
+	margin-left: 20px;
+}
+
+.cTocConatiner ul ul ul {
+	margin-left: 20px;
+}
+
+.cTocConatiner ul ul,
+.cTocConatiner ul ul ul {
+	border: none;
+}
+
+.cPagecontent {
+	padding-left: 40px;
+	border-left: 1px solid green;
+}
+
+.cToC-pannel {
+	display: inline-block;
+	width: 100%;
+}
+
+.cToC-pannel.stick {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 95vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	glyph-orientation-horizontal: 0rad;
+}
