@@ -93,7 +93,7 @@ The Consumer Data Standards (CDS) have been developed as part of the Australian 
 
 Following are the key actors related to CDR context:
 
-- Consumer: The end-user who is be benefited from CDR, the consumer is able to request the Data Holder to provide data.
+- Consumer: The end-user who is benefited from CDR, the consumer is able to request the Data Holder to provide data.
 - Data Holder: The Data Holder (DH) is the organization that CDR is applied to provide data to the consumer. For example, a bank.
 - Data Recipient: A Data Recipient (DR) is an accredited party that is able to request CDR data from a Data Holder with the consent of the consumer. 
 
