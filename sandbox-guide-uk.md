@@ -11,7 +11,77 @@ This guide walks you through the WSO2 Open Banking solution.
 
 If you want to start from scratch by creating your own application, start from [Create an Application](#step-1-create-an-application). If not, start from the [Subscribe to APIs](#step-2-subscribe-to-apis) section where you can use our default application.
 
-<!-- steps menu -->
+<div class="row cDiagramBox">
+
+<div class="col-sm-12 col-md-12 col-lg-2 cStepContainer">
+<a href="#step-1-create-an-application">
+<span class="cStep" >STEP 1 </span>
+<div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
+<img src="/img/api-invocation.svg"/>
+<span class="cIconTitle" >Create an application</span>
+<p>Create an application which will consume the APIs of the Bank</p>
+</div>
+<div class="clearfix"></div>
+</a>
+</div>
+
+<div class="col-sm-12 col-md-12 col-lg-2 cStepContainer">
+<a href="#step-2-subscribe-to-apis">
+<span class="cStep" >STEP 2 </span>
+<div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
+<img src="/img/api-invocation.svg"/>
+<span class="cIconTitle" >Subscribe to APIs</span>
+<p>Subscribe to APIs that can be consumed by TPPs</p>
+</div>
+<div class="clearfix"></div>
+</a>
+</div>
+
+
+<div class="col-sm-12 col-md-12 col-lg-4 cIconSection">
+<span class="cIconTitle cSectionTitle" >Generate Token</span>
+
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
+<a href="##step-3-generate-tokens">
+<span class="cStep" >STEP 3 </span>
+<div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
+<img src="/img/api-invocation.svg"/>
+<span class="cIconTitle" >Authentication</span>
+<p>Authentication by the bank to use the Application</p>
+</div>
+<div class="clearfix"></div>
+</a>
+</div>
+
+<div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
+<a href="#">
+<span class="cStep" >STEP 4 </span>
+<div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
+<img src="/img/api-invocation.svg"/>
+<span class="cIconTitle" >Authorization and Consent</span>
+<p>Authorization and Consent for the AISPs and PISPs</p>
+</div>
+<div class="clearfix"></div>
+</a>
+</div>
+</div>
+
+</div>
+
+
+<div class="col-sm-12 col-md-12 col-lg-2 cStepContainer cLast">
+<a href="#">
+<span class="cStep" >STEP 5 </span>
+<div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
+<img src="/img/api-invocation.svg"/>
+<span class="cIconTitle" >Consume APIs</span>
+<p>Call relevant APIs as an AISP or a PISP</p>
+</div>
+<div class="clearfix"></div>
+</a>
+</div>
+</div>
 
 <!-- step 1 -->
 ## STEP 1: Create an Application
