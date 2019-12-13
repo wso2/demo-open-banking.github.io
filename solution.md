@@ -7,15 +7,15 @@ toc: true
 
 ## Overview
 
-WSO2 Open Banking combines the technical capabilities of WSO2 API Manager, WSO2 Identity Server, WSO2 Stream Processor, and WSO2 Enterprise Integrator and supports the technology stack that banks need to become PSD2 and CDR compliant and digitally transformed. 
+WSO2 Open Banking is a purpose built solution for regulatory compliance. It helps align banking and regulatory needs with technology infrastructures and regulatory expertise to quickly satisfy compliance.  It is assembled using a componentized architecture ensuring flexibility to meet different technology use cases. Built on top of a unified integration platform. WSO2 Open Banking helps banks become integration agile for any digital initiative beyond compliance 
 
-WSO2 Open Banking leverages five key technology areas critical to a banking infrastructure; API Management, Identity and Access Management, Integration, Analytics and Business Insights, and Fraud Detection bundled together to form a componentized architecture. This gives the flexibility to reuse existing infrastructure, and banks only need to obtain the components that are not available in their current infrastructure. 
+WSO2 Open Banking leverages key technology areas critical to a banking infrastructure; API Management, Identity and Access Management, Integration, Analytics and Business Insights, and Fraud Detection bundled together in a componentized architecture. This gives the flexibility to reuse existing infrastructure, and banks only need to obtain the components that are not available in their current infrastructure. 
 
 ![wso2-ob-architecture](img/architecture.png)
 
 ## API Management
-- Support for Open Banking UK, Berlin Group, Consumer Data Standards, and STET API specifications
-- API Management Security with OAuth 2.0 and Mutual SSL including the support for PSD2 eIDAS
+- Support for Open Banking UK, Berlin Group NextGenPSD2, and Australian Consumer Data Standards API specifications
+- API Security with OAuth 2.0 and Mutual SSL including the support for PSD2 eIDAS
 - API Publishing and Governance
 - API Throttling and Rate Limiting
 - API Monitoring and Monetization
@@ -27,10 +27,10 @@ WSO2 Open Banking leverages five key technology areas critical to a banking infr
 
 ## Consent Management
 - Capabilities to store, validate and revoke consents
-- Compliant with Open Banking UK, Berlin Group, Consumer Data Standards, and STET API specifications
+- Compliant with Open Banking UK, Berlin Group NextGenPSD2, and Australian Consumer Data Standards API specifications
 
 ## Integration
-- Easy integration with the core banking systems
+- Easy integration with core banking systems
 - Support for multiple protocols (REST, SOAP, and WebSocket) and message formats (JSON and XML)
 
 ## Third Party Provider Onboarding

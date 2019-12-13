@@ -168,7 +168,7 @@ Security refers to the means through which computer systems are protected from d
 ### Encryption
 Encryption is the process of translating/encoding data/messages (plaintext) using an algorithm (cipher) into a secret code (ciphertext) that can only be accessed by authorized entities with a secret key or a password.
 
-### User Authentication
+### Consumer Authentication
 Authentication is the process used to distinctly identify a certain entity using the following factors:
 - Knowledge factor: This is something the user knows. For example, password, PIN, and security question.
 - Possession factor: This is something the user has. For example, ATM card, identity card, mobile phone, and security token.
