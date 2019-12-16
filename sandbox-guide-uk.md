@@ -19,7 +19,7 @@ If you want to start from scratch by creating your own application, start from [
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
 <span class="cIconTitle" >Create an application</span>
-<p>Create an application which will consume the APIs of the Bank</p>
+<p>Create an application to consume the banking APIs</p>
 </div>
 <div class="clearfix"></div>
 </a>
@@ -43,24 +43,24 @@ If you want to start from scratch by creating your own application, start from [
 
 <div class="row">
 <div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
-<a href="##step-3-generate-tokens">
+<a href="#step-3-authentication">
 <span class="cStep" >STEP 3 </span>
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
 <span class="cIconTitle" >Authentication</span>
-<p>Authentication by the bank to use the Application</p>
+<p>Authentication by the bank to use the application</p>
 </div>
 <div class="clearfix"></div>
 </a>
 </div>
 
 <div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
-<a href="#">
+<a href="#step-4-authorisation-and-consent">
 <span class="cStep" >STEP 4 </span>
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
-<span class="cIconTitle" >Authorization and Consent</span>
-<p>Authorization and Consent for the AISPs and PISPs</p>
+<span class="cIconTitle" >Consent Authorisation</span>
+<p>Consent authorisation for the AISP/PISP applications</p>
 </div>
 <div class="clearfix"></div>
 </a>
@@ -71,12 +71,12 @@ If you want to start from scratch by creating your own application, start from [
 
 
 <div class="col-sm-12 col-md-12 col-lg-2 cStepContainer cLast">
-<a href="#">
+<a href="#step-5-consume-apis">
 <span class="cStep" >STEP 5 </span>
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
 <span class="cIconTitle" >Consume APIs</span>
-<p>Call relevant APIs as an AISP or a PISP</p>
+<p>Invoking APIs as an AISP/PISP application</p>
 </div>
 <div class="clearfix"></div>
 </a>
@@ -125,7 +125,7 @@ If you want to start from scratch by creating your own application, start from [
 
      <img src="/img/APIsTab.png" width="200">
 
-2. Select a thumbnail and browse the API.
+2. Browse the Accounts and Transaction API.
 
      <img src="/img/browseAPI.png" width="200">
 
@@ -142,7 +142,7 @@ If you want to start from scratch by creating your own application, start from [
 <br/>
 
 <!-- step 3 -->
-## STEP 3: Generate Tokens
+## STEP 3: Authentication
 
 The APIs are secured using the OAuth2.0 protocol. In order to invoke secured APIs, you should submit a valid OAuth2.0 token with required authorisation levels. Depending on the security requirements, we use the Authorization Code grant type and Client Credentials grant type to generate access tokens.
 
@@ -151,7 +151,7 @@ In this guide, the application directs the consumer to the website of the custom
 <hr/>
 **Generate keys**
 
-The application requires a Client ID(Consumer Key) and a Client secret(Consumer Secret) to access the subscribed APIs.
+The application requires a Client ID (Consumer Key) and a Client Secret (Consumer Secret) to access the subscribed APIs.
 
 1. Go to the **Applications** tab.
     
@@ -176,6 +176,8 @@ The application requires a Client ID(Consumer Key) and a Client secret(Consumer 
 
 4. Click **Generate Keys**.
 
+NOTE: Follow the above steps to regenerate the access token.
+<br/> 
 <hr/>
 **Create a new consent**
 
@@ -183,7 +185,7 @@ The application requires a Client ID(Consumer Key) and a Client secret(Consumer 
 
      <img src="/img/APIsTab.png" width="200">
 
-2. Select an API that the application has subscribed to.
+2. Select the Accounts and Transaction API.
 
      <img src="/img/browseAPI.png" width="200">
 
@@ -195,15 +197,145 @@ The application requires a Client ID(Consumer Key) and a Client secret(Consumer 
      - Select Sandbox as the environment. 
      - The request header is set by the API Store.
 
-4. Import this [PKCS12 file](/attachments/cert.p12) to your browser to invoke the endpoints. 
+4. Mutual Transport Layer Security (MTLS) is a protocol recommended by the Open Banking Implementation Entity. In the WSO2 Open Banking solution, MTLS is enforced by using handlers in order to ensure that the authenticated client uses the pre-registered transport certificate to communicate with APIs.
 
-5. Create a consent using the **Try it out** option.
+    - To invoke the APIs in the demo, download the certificate available [here](/attachments/cert.p12) and import it into your web browser. 
+
+5. Create a consent using the **POST /account-access-consents** resource. Use the **Try it out** option.
       
-      <img src="/img/tryItOut.png" width="600">
+      <img src="/img/tryItOut.png" width="800">
 
     - Modify the request payload with a valid date and time values.
-    - Set the **x-fapi-financial-id** parameter value to **open-bank**.
+    - Set the **x-fapi-financial-id** value to **open-bank**.
     - Click **Execute** to create a consent resource.
+    - If the creation is successful, the response body will contain a unique ID for the consent named **ConsentId**.
+
+<br/>
+<!-- step 4 -->
+## STEP 4: Consent Authorisation
+
+This step explains authorising account consents. The AISP redirects the bank customer to authenticate and approve/deny application-provided consents.
+
+1. In the left menu, click APIs and browse the Authorize API.
+
+      <img src="/img/AuthorizeAPI.png" width="200">
+
+2. Go to the **API Console** tab and click **Generate signed request**.
+
+     <img src="/img/AuthoriszeAPIGenerateJWT.png" width="600">
+
+3. Fill the expanded form.
+
+     - Client ID: The Consumer Key of the application.
+     - Scopes: To invoke the Accounts API, set the value as **accounts openid**.
+     - Redirect URI: The Callback URL of the application.
+     - Consent ID: The unique id of the consent resource created in [STEP 3](#step-3-authentication).
+     - Use the default values for the State, Nonce, and Response type fields.
+
+4. Click **Generate**.
+
+      NOTE: Once you generate a signed request, you can simply regenerate by clicking **Regenerate**.
+
+5. Obtain an authorization code. Use the **Try it out** option.
+
+   <img src="/img/TryItOutAuthCode.png" width="600">
+
+    - Copy the **response_type, client_id, scope, redirect_uri, state**, and **nonce** values from the form above.
+    - Fill the **request** field with the **Generated token**.
+
+        <img src="/img/GeneratedToken.png" height="50">
+        
+    - Click **Execute** to generate the **Request URL**.
+
+6. Copy the **Request URL** to a browser. You are redirected to a login page, sign in using the credentials of your WSO2 account.
+
+7. As SMSOTP is configured as the second step of Two-factor authentication, enter the code sent to your mobile phone.
+
+8. Upon successful authentication, the PSU is redirected to the consent management page.
+
+      <img src="/img/consentMgtPage.png" height="400">
+
+9. PSU needs to select the accounts to which the consent is granted; click **Approve**.
+
+10. The browser is redirected to the redirect URL of the application and an authorization code is generated. Note down the authorization code.
+
+11. Copy the code from the URL.
+
+<br>
+<hr/>
+
+**Generate user access token**
+
+1. In the left menu, click APIs and browse the Token API.
+
+      <img src="/img/TokenAPI.png" width="200">
+
+2. Go to the **API Console** tab and click **Generate signed request**.
+
+     <img src="/img/TokenAPIGenerateJWT.png" width="600">
+
+3. Fill the expanded form.
+
+     - Client ID: The Consumer Key of the application.
+
+4. Click **Generate**.
+
+      <img src="/img/GeneratedSignedToken.png" width="800">
+
+      NOTE: Once you generate a signed request, you can simply regenerate by clicking **Regenerate**.
+
+5. Obtain an OAuth2 access token. Use the **Try it out** option.
+
+      <img src="/img/OAuth2AccessTokenTryOut.png" width="800">
+
+      - The value of grant_type field should be **authorization_code**.
+      - Set the scope to **accounts**.
+      - code is the **authorization code** generated in the above step.
+      - redirect_uri should be the Callback URL of the application.
+      - client_id is the Consumer Key of the application.
+      - Set the client_assertion_type to **urn:ietf:params:oauth:client-assertion-type:jwt-bearer**.
+      - client_assertion is the **Generated token** in the Generate client assertion form.
+
+6. Click **Execute**. Note down the user access token in the response.
+
+<br/>
+
+<!-- step 5 -->
+## STEP 5: Consume APIs
+
+1. In the left menu, click **APIs**.
+
+2. Browse the Accounts and Transaction API.
+
+      <img src="/img/browseAPI.png" width="200">
+
+3. Go to the **API Console** tab.
+
+      <img src="/img/ReplacewithAccessToken.png" width="600"> 
+     
+     - Select your application from the drop-down lists.
+     - Select Sandbox as the environment. 
+     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-authorisation-and-consent).
+
+4. Invoke the submission resources using the **Try It Out** option. 
+
+      For example, retrieve the accounts using the **GET /accounts** resource.
+
+     - Select the resource and click Try It Out.
+
+       <img src="/img/RetrieveAccounts.png" width="800">
+
+     - Set the **x-fapi-financial-id** value to **open-bank**.
+     - Click **Execute** to retrieve a full list of accounts that the PSU has authorised the AISP to access. 
+
+
+  
+
+
+
+
+
+
 
 
 
