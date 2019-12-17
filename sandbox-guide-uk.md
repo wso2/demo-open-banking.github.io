@@ -209,8 +209,8 @@ NOTE: Follow the above steps to regenerate the access token.
 
     - Modify the request payload with a valid date and time values.
     - Set the **x-fapi-financial-id** value to **open-bank**.
-    - Click **Execute** to create a consent resource.
-    - If the creation is successful, the response body will contain a unique ID for the consent named **ConsentId**.
+    
+6. Click **Execute** to create a consent resource. If the creation is successful, the response body will contain a unique ID for the consent named **ConsentId**.
 
 <br/>
 <!-- step 4 -->
@@ -469,14 +469,12 @@ NOTE: Follow the above steps to regenerate the access token.
       
       <img src="/img/tryOutDomesticPaymentsConsent.png" width="800">
 
-    - Modify the request payload following the sample payload available [here](/attachments/payload-domestic-payment-consent.json){:target="_blank"}.
+    - Replace the request payload with the sample payload available [here](/attachments/payload-domestic-payment-consent.json){:target="_blank"}.
     - Every request will be processed only once per **x-idempotency-key**. This needs to be a unique value.
     - Set the **x-fapi-financial-id** value to **open-bank**.
     - The **x-jws-signature** is the JWS signature of the request payload generated in **Generate JWS signature**.
 
-8. Click **Execute** to create a consent resource.
-
-    - If the creation is successful, the response body will contain a unique ID for the consent named **ConsentId**.
+8. Click **Execute** to create a consent resource. If the creation is successful, the response body will contain a unique ID for the consent named **ConsentId**.
 
 <br/>
 <!-- step 4 -->
@@ -585,7 +583,20 @@ This step explains authorising payment consents. The PISP redirects the bank cus
      - Select Sandbox as the environment. 
      - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-authorisation-and-consent).
 
-4. Invoke the submission resources using the **Try It Out** option. 
+4. Click **Generate JWS signature** to expand the form. Provide the requested information as defined below:  
+
+     - Client ID: The Consumer Key of the application.
+     - Payload: The payload of the create payment resource request. A sample payload is available [here](/attachments/payload-domestic-payment.json){:target="_blank"}. 
+     Replace the value of **ConsentId** with the payment consent generated in [STEP 3](#step-3-authentication). 
+    
+     
+   <img src="/img/GenerateJWSPayment.png" width="900">
+
+5. Click **Generate**.    
+
+      NOTE: Once you generate a signed request, you can simply regenerate by clicking **Regenerate**. 
+     
+6. Invoke the submission resources using the **Try It Out** option. 
 
       For example, create a Domestic Payment using the **POST /domestic-payments** resource.
 
@@ -593,13 +604,14 @@ This step explains authorising payment consents. The PISP redirects the bank cus
 
        <img src="/img/tryOutDomesticPayments.png" width="800">
 
-    - Modify the request payload - This payload is similar to the payload of the create payment consent request. Therefore, update the sample payload available [here](/attachments/payload-domestic-payment.json){:target="_blank"} by adding the ConsentId of the authorised payment consent resource. Refer to the sample request body in the API Console > Try It Out to see a sample request payload. 
+    - Replace the request payload with the sample payload available [here](/attachments/payload-domestic-payment.json){:target="_blank"}.
+    Update the value of **ConsentId** with the payment consent generated in [STEP 3](#step-3-authentication). 
     - Every request will be processed only once per **x-idempotency-key**. This needs to be a unique value.
     - Set the **x-fapi-financial-id** value to **open-bank**.
     - The **x-jws-signature** is the JWS signature of the request payload generated in **Generate JWS signature**.
 
      
-5. Click **Execute** to create a Domestic Payment resource. If the creation is successful, the response will contain a unique ID for the resource known as DomesticPaymentId.
+7. Click **Execute** to create a Domestic Payment resource. If the creation is successful, the response will contain a unique ID for the payment resource. 
   
 
 
