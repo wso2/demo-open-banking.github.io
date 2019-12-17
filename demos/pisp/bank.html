@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="bank">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="WSO2">
+
+    <title><!-- Title will update dynamically --></title>
+
+    <link rel="stylesheet" href="libs/bootstrap-4.0.0/css/bootstrap.min.css" id="bootstrap" disabled="true">
+    <link rel="stylesheet" href="libs/font-wso2-1.3.0/css/font-wso2.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link rel="stylesheet" href="" id="theme">
+  </head>
+  <body style="display: none;">
+
+   <div class="page-content-wrapper">
+        <div class="container">
+
+            <div class="login-form-wrapper">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="brand-container add-margin-bottom-5x">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <img src="" class="logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 login">
+                        <div class="data-container">
+                            <form class="form-horizontal" id="mainLoginForm" autocomplete="off">
+                                <h3>Sign in</h3>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="input-group input-wrap">
+                                            <input type="text" id="username" name="name" title="Username" class="form-control" value="johndoe@email.com" placeholder="Username">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="input-group input-wrap">
+                                            <input type="password" autocomplete="off" id="password" name="pass" title="Password" class="form-control" value="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="tenant" name="tenant" value="null">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <a href="bank_otp.html" class="btn btn-primary" role="main-action">Sign in</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+              <div class="container-fluid">
+                <p><span class="bank-name"></span> | © <script>document.write(new Date().getFullYear());</script> Powered by <a title="WSO2" href="http://wso2.com/" target="_blank"><i class="icon fw fw-wso2"></i></a> Open Banking</p>
+              </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="libs/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="libs/popperjs-1.11.0/popper.min.js"></script>
+    <script src="libs/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/demos.js"></script>
+    <script>
+        window.parent.$('#demo-desc').html('Once you select a bank, the PISP makes a payment initiation request to the bank with your transaction details. The selected bank then prompts you to log in.');
+        window.parent.$("iframe#mobile-content").attr('data-prevsrc',  'demos/pisp/directpay.html');
+    </script>
+  </body>
+</html>

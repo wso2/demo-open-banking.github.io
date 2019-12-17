@@ -1,0 +1,1198 @@
+/*
+* Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+*
+* WSO2 Inc. licenses this file to you under the Apache License,
+* Version 2.0 (the "License"); you may not use this file except
+* in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*
+*/
+
+.login.containerBG {
+		background: #093b66 !important;
+		font-family: Nunito Sans, Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+.teal {
+    background-color: #093b66 !important;
+}
+
+.white {
+    background-color: #fff !important;
+}
+
+.container {
+		background: #fff !important;
+}
+
+.widthControl {
+    width: 80% !important;
+    margin-top: 10% !important;
+    margin-bottom: 10% !important;
+}
+
+.logo {
+		width: 250px;
+}
+
+.logo2 {
+		position: absolute;
+    margin-top: 5px;
+    margin-left: 10px;
+		width: 300px;
+}
+
+.alert > .btn-floating {
+		float: right;
+    margin-top: -6px;
+}
+
+.alert.success {
+    background: #4caf50;
+    padding: 10px;
+    margin: 30px;
+    color: #fff !important;
+}
+
+.alert.error {
+    background: #F44336;
+    padding: 10px;
+    margin: 30px;
+    color: #fff !important;
+}
+
+.login-middle-pane-left {
+    margin-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    border-top: 5px solid #e68200;
+    border-bottom: 8px solid #e68200;
+}
+
+.btn, .btn-large {
+    background-color: #093b66 !important;
+}
+
+.teal.lighten-1 {
+		background-color: #e68200 !important;
+}
+
+input.valid:not([type]), input.valid:not([type]):focus, input[type=text].valid:not(.browser-default), input[type=text].valid:not(.browser-default):focus, input[type=password].valid:not(.browser-default), input[type=password].valid:not(.browser-default):focus, input[type=email].valid:not(.browser-default), input[type=email].valid:not(.browser-default):focus, input[type=url].valid:not(.browser-default), input[type=url].valid:not(.browser-default):focus, input[type=time].valid:not(.browser-default), input[type=time].valid:not(.browser-default):focus, input[type=date].valid:not(.browser-default), input[type=date].valid:not(.browser-default):focus, input[type=datetime].valid:not(.browser-default), input[type=datetime].valid:not(.browser-default):focus, input[type=datetime-local].valid:not(.browser-default), input[type=datetime-local].valid:not(.browser-default):focus, input[type=tel].valid:not(.browser-default), input[type=tel].valid:not(.browser-default):focus, input[type=number].valid:not(.browser-default), input[type=number].valid:not(.browser-default):focus, input[type=search].valid:not(.browser-default), input[type=search].valid:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown {
+    border-bottom: 1px solid #e68200 !important;
+    -webkit-box-shadow: 0 1px 0 0 #e68200 !important;
+    box-shadow: 0 1px 0 0 #e68200 !important;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #e68200 !important;
+    -webkit-box-shadow: 0 1px 0 0 #e68200 !important;
+    box-shadow: 0 1px 0 0 #e68200 !important;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+		margin-bottom: 0;
+}
+
+.input-field .prefix.active {
+		color: #e68200;
+}
+
+#dashboardContent {
+		/*padding: 30px 10px;*/
+}
+
+@media screen and (max-width: 601px) {
+    .widthControl {
+        width: 90%;
+        margin-top: 10%;
+    }
+
+    .widthShrink {
+        width: 95%;
+        margin-top: 3%;
+    }
+
+    #balanceItems2 {
+        padding-left: 10%;
+        margin-left: 1%;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+    }
+
+    #updatesContainer {
+        display: none;
+    }
+
+    .navigatorIcons {
+        overflow-y: hidden;
+        max-height: 56px;
+    }
+
+    .balanceHalfBoard {
+        height: 20vh;
+        width: 95vw !important;
+        margin-left: -10% !important;
+    }
+
+    #balanceSummary {
+        height: 22vh;
+        width: 100%;
+        margin-right: -10%;
+        padding-left: 0;
+    }
+
+    .totalCurrency {
+        font-weight: 300;
+        font-size: 7vw;
+    }
+
+    .summaryTexts {
+        margin-left: -20%;
+    }
+
+    .creditCurrency {
+        font-size: 6vw;
+    }
+
+    #accountsBoard {
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .accountsScroll {
+        max-height: 55vh;
+        overflow-y: auto;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+    }
+
+    .boardsContainer {
+        margin-top: 12%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .cardTitle {
+        font-size: small;
+    }
+
+    .cardContent {
+        font-size: smaller;
+    }
+
+    .cardInsideNormal {
+        font-weight: 300;
+        font-size: smaller;
+        margin-top: -2%;
+    }
+
+    #transactionBoard {
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #standingOrderBoard {
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .standingSecondaryContent {
+        margin-top: 15% !important;
+    }
+
+    #balanceItems2 li {
+        min-height: 30px;
+        border: 0px;
+    }
+
+    .cardContainer {
+        width: 40% !important;
+    }
+
+    #bankList {
+        margin-left: 10%;
+        overflow-x: hidden;
+    }
+
+    .bankCardTitle {
+        font-size: small !important;
+        padding-left: 2% !important;
+        padding-bottom: 5% !important;
+
+    }
+
+    #balanceByBanks {
+        margin-left: 1%;
+        height: 35vh;
+        margin-bottom: -20%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+
+    #updatesContainer {
+        display: none;
+    }
+
+    .standingSecondaryContent {
+        margin-top: inherit;
+    }
+
+    .containerBG {
+        background: #ffffff /*url("../sources/images/bg.png")*/;
+        font-family: Nunito Sans, Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+    }
+
+    .widthControl {
+        width: 45%;
+        margin-top: 10%;
+    }
+
+    .balanceHalfBoard {
+        width: 100% !important;
+
+    }
+
+    #balanceByBanks {
+        width: 100%;
+        height: 35vh;
+        margin-bottom: 0;
+    }
+
+    #balanceSummary {
+        width: 100%;
+        margin-right: -10%;
+    }
+
+    .accountsScroll {
+        max-height: 35vh;
+        overflow-y: auto;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+    }
+
+    #balanceItems2 {
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+    }
+
+    #accountsBoard {
+        width: 100%;
+        margin-right: 0.5%;
+    }
+
+    #transactionBoard {
+        width: 100%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+
+    #standingOrderBoard {
+        width: 100%;
+        height: 43vh;
+        margin-left: 0.5%;
+    }
+
+    .navigatorIcons {
+        overflow-y: hidden;
+        max-height: inherit;
+    }
+
+    .totalCurrency {
+        font-weight: 300;
+        font-size: 5vw;
+    }
+
+    .summaryTexts {
+        margin-left: inherit;
+    }
+
+    .creditCurrency {
+        font-size: 3vw;
+    }
+
+    .cardTitle {
+        font-size: larger;
+    }
+
+    .cardContent {
+        font-size: medium;
+    }
+
+    .cardInsideNormal {
+        font-weight: 300;
+        font-size: larger;
+        /*margin-top: 12%;*/
+    }
+
+    #balanceItems2 li {
+        min-height: 70px;
+        border: 0px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    #balanceByBanks {
+        width: 50%;
+        height: 35vh;
+        margin-bottom: -10%;
+    }
+
+    .containerBG {
+        background: #ffffff /*url("../sources/images/bg.png")*/;
+        font-family: Nunito Sans, Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+    }
+
+    .widthControl {
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .widthControl2 {
+        width: 55%;
+        margin-top: 10%;
+    }
+
+    .widthShrink {
+        width: 60%;
+        margin-top: 3%;
+    }
+
+    .balanceHalfBoard {
+        height: 30vh;
+        width: 100% !important;
+    }
+
+    #balanceHistory {
+        margin-right: 1%;
+        height: 100%;
+        width: 100%;
+    }
+
+    #balanceHistory2 {
+        display: none;
+    }
+
+    #chart {
+        margin-top: 50%;
+    }
+
+    .imageChart {
+        margin-top: 25%;
+        padding-left: 20%;
+    }
+
+    .boardsContainer {
+        margin-top: 13%;
+    }
+
+    .cardInsideNormal {
+        font-weight: 300;
+        font-size: 1.5vw;
+        margin-top: 12%;
+    }
+
+    .cardTitle {
+        font-size: 1.25vw;
+    }
+
+    .cardContent {
+        font-size: 1.1vw;
+    }
+
+    .accountsScroll {
+        max-height: 35vh;
+        overflow-y: auto;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+    }
+
+    #updatesBoard {
+        height: 15vh;
+        margin-top: 4% !important;
+        margin-bottom: 0;
+        margin-right: 0.5%;
+        border-left: 0;
+        width: 100%;
+    }
+
+    #updatesContainer {
+        margin-top: 2%;
+        display: inherit;
+    }
+
+    #balanceItems2 {
+        max-height: 24vh;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+    }
+
+    .boardTitle {
+        margin-top: 2%;
+        margin-bottom: 0;
+    }
+
+    #balanceSummary {
+        height: 22vh;
+        width: 50%;
+        margin-right: -10%;
+    }
+
+    #accountsBoard {
+        width: 33%;
+        height: 43vh;
+        margin-right: 0.5%;
+    }
+
+    #transactionBoard {
+        height: 43vh;
+        width: 31%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+
+    #standingOrderBoard {
+        width: 33%;
+        height: 43vh;
+        margin-left: 0.5%;
+    }
+
+    .navigatorIcons {
+        overflow-y: hidden;
+        max-height: inherit;
+    }
+
+    .totalCurrency {
+        font-weight: 300;
+        font-size: 3vw;
+    }
+
+    .summaryTexts {
+        margin-left: inherit;
+    }
+
+    .creditCurrency {
+        font-size: 2vw;
+    }
+
+    .standingSecondaryContent {
+        margin-top: inherit;
+    }
+
+    #balanceItems2 li {
+        min-height: 70px;
+        border: 0px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .containerBG {
+        background: #ffffff /*url("../images/bg.png")*/;
+        font-family: Nunito Sans, Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+    }
+
+    .widthControl {
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .widthControl2 {
+        width: 55%;
+        margin-top: 10%;
+    }
+
+    .widthShrink {
+        width: 60%;
+        margin-top: 3%;
+    }
+
+    .balanceHalfBoard {
+        height: 30vh;
+        width: 70% !important;
+    }
+
+    #balanceHistory {
+        margin-right: 1%;
+        height: 42vh;
+        width: 90%;
+
+    }
+
+    #balanceHistory2 {
+        width: 30%;
+        display: inherit;
+    }
+
+    #chart {
+        margin-top: 15%;
+        margin-bottom: 30%;
+    }
+
+    .imageChart {
+        height: 80%;
+        margin-top: 15%;
+        padding-left: 20%;
+    }
+
+    .cardInsideNormal {
+        font-weight: 300;
+        font-size: 28px;
+        margin-top: 0;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardContent {
+        font-size: 15px;
+    }
+
+    .boardsContainer {
+        margin-top: 1%;
+    }
+
+    .accountsScroll {
+        max-height: 36vh;
+        overflow-y: auto;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+
+    }
+
+    #updatesBoard {
+        height: 19vh;
+        margin-top: 4% !important;
+        margin-bottom: 0;
+        margin-right: 0.5%;
+        border-left: 0;
+        width: 100%;
+    }
+
+    #updatesContainer {
+        margin-top: -1.25%;
+        display: inherit;
+    }
+
+    #balanceItems2 {
+        max-height: 14vh;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+    }
+
+    .boardTitle {
+        margin-top: 2%;
+        margin-bottom: 3%;
+    }
+
+    #logos {
+        text-align: center;
+    }
+
+    #balanceSummary {
+        height: 22vh;
+        width: 50%;
+        margin-right: -10%;
+    }
+
+    #accountsBoard {
+        width: 33%;
+        height: 43vh;
+        margin-right: 0.5%;
+    }
+
+    #transactionBoard {
+        height: 43vh;
+        width: 31%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+
+    #standingOrderBoard {
+        width: 33%;
+        height: 43vh;
+        margin-left: 0.5%;
+    }
+
+    .navigatorIcons {
+        overflow-y: hidden;
+        max-height: inherit;
+    }
+
+    .totalCurrency {
+        font-weight: 300;
+        font-size: 3vw;
+    }
+
+    .summaryTexts {
+        margin-left: inherit;
+    }
+
+    .creditCurrency {
+        font-size: 2vw;
+    }
+
+    .standingSecondaryContent {
+        margin-top: inherit;
+    }
+
+    #balanceItems2 li {
+        min-height: 70px;
+        border: 0px;
+    }
+
+    #balanceByBanks {
+        margin-left: 1%;
+        height: 35vh;
+        margin-bottom: -20%;
+    }
+}
+
+/*html {
+    font-family: Nunito Sans,  Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+}*/
+
+.containerBG {
+    background: #ffffff /*url("../images/bg.png")*/;
+    font-family: Nunito Sans, Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+.containerBGFake {
+    background: #4f565d /*url("../images/bg.png")*/;
+    font-family: Georgia, Calibri, Trebuchet, sans-serif;
+}
+
+.moreBanks {
+    width: 55%;
+    margin-top: 5%;
+}
+
+.login-middle-pane2 {
+    margin-top: 40%;
+}
+
+.middle-pane-description {
+    font-weight: 200;
+    font-size: larger;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.middle-pane-text {
+    font-weight: 200;
+    font-size: larger;
+}
+
+.card .card-title {
+    font-size: 18px;
+}
+
+.card-text {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.fake-login-middle-pane-left {
+    margin-top: 8%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.padding15 {
+    padding-top: 3%;
+}
+
+.fabBox {
+    border-radius: 0%;
+    width: 60px;
+}
+
+.addBankImages {
+    height: 10%;
+}
+
+.cardBox {
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #2b2b2b;
+}
+
+.viewPortAll {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.card-image {
+    padding: 10% 8% 20%;
+}
+
+#navBars {
+    width: 5%;
+    height: 100vh;
+    padding-right: 0;
+    /*background-color: #6f6f6f;*/
+}
+
+.navContainer {
+    margin-top: 10vh;
+    padding: 3vh 10%;
+
+}
+
+.bottomMargin {
+    margin-bottom: 3vh;
+}
+
+.iconText {
+}
+
+.navIcons {
+    height: 40px;
+    margin-bottom: -40%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+#avatarNav {
+    height: 100%;
+}
+
+#dashboard {
+    margin-top: 1%;
+    width: 100%;
+    height: 100%;
+}
+
+#dashboardHeader {
+    height: 10vh;
+    margin-bottom: 0;
+}
+
+#balanceBoard {
+    height: 25vh;
+}
+
+.updatesIcon {
+    margin-right: 1%;
+}
+
+#updatesBoard li {
+    margin-bottom: 10px;
+    border-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    min-height: 30px;
+}
+
+#accountsBoard li {
+    margin-bottom: 10px;
+    border-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#transactionBoard li {
+    margin-bottom: 10px;
+    border-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#standingOrderBoard li {
+    margin-bottom: 10px;
+    border-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.boards {
+}
+
+.navFonts {
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 3vh;
+}
+
+.cardInside {
+    font-weight: 300;
+    font-size: 48px;
+    margin-top: 3%;
+    margin-right: 2%;
+}
+
+.accountsScrollBig {
+    max-height: 70vh;
+    width: 70vw;
+    overflow-y: auto;
+    border-width: 0;
+
+}
+
+#accountTable li {
+    margin-bottom: 3%;
+    margin-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 1.5%;
+    padding-left: 13%;
+    border-radius: 8px;
+
+}
+
+#accountTable img {
+    left: 45px;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.accountsScroll li {
+    margin-bottom: 10px;
+
+}
+
+
+
+#balanceItems {
+    overflow-y: auto;
+    max-height: 30vh;
+}
+
+#balanceItems li {
+    min-height: 0px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    background-color: #F5F5F5;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+.marginControl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.leftPaddingControl {
+    padding-left: 0 !important;
+}
+
+.marginControlOnePercent {
+    margin-bottom: 3%;
+}
+
+.iconBig {
+    font-size: 30px;
+}
+
+.cardTitle2 {
+    font-size: 20px;
+}
+
+.cardContent2 {
+    font-size: 16px;
+}
+
+.headerTitle {
+    font-weight: 400;
+    padding: .5%;
+}
+
+.headerMessage {
+    font-weight: 300;
+    padding-left: .5%;
+}
+
+.test {
+}
+
+.test2 {
+    border: 2px solid #ffffff;
+}
+
+.boardTile {
+    margin-bottom: 10px;
+    /*border: 2px solid #6f6f6f;*/
+}
+
+/* Add shadow effect to chart. If you don't like it, get rid of it. */
+svg {
+    -webkit-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .3));
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .25));
+}
+
+/*Styling for the lines connecting the labels to the slices*/
+polyline {
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+/* Make the percentage on the text labels bold*/
+.labelName tspan {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* In biology we generally italicise species names. */
+.labelName {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.VictoryContainer {
+    height: 50%;
+    width: 50%;
+}
+
+#chartContainer {
+    margin-bottom: -10%;
+}
+
+#accountTable {
+    width: 100%;
+}
+
+.links {
+    z-index: 9999;
+}
+
+a.links {
+    cursor: pointer;
+}
+
+.cursors {
+    cursor: pointer;
+}
+
+#Accounts:hover {
+    background-color: #009688 !important;
+}
+
+#Transactions:hover {
+    background-color: #009688 !important;
+}
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #009688;
+    stroke-width: 3;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #143a5a;
+    stroke: #2b2b2b;
+}
+
+.area {
+    fill: #15466a;
+    stroke-width: 0;
+}
+
+#donut {
+    margin-top: 9%;
+    margin-bottom: 18vh;
+    height: 57%;
+}
+
+.y {
+    font-family: Roboto;
+    color: #607d8b;
+}
+
+.logout {
+    margin-top: 35vh;
+}
+
+.ct-series-a .ct-area {
+    fill: #143a5a;
+    fill-opacity: 1;
+}
+
+.ct-series-b .ct-area {
+    fill: #0b6f6f;
+    fill-opacity: 1;
+}
+
+.ct-line {
+    stroke: #0b6f6f !important;
+}
+
+.ct-point {
+    stroke: #0c1b30 !important;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent !important;
+}
+
+.fadeInUp {
+    animation-duration: .3s !important;
+    animation-fill-mode: both;
+}
+
+.fadeInLeft {
+    animation-duration: .5s !important;
+    animation-fill-mode: both;
+}
+
+.fadeInRight {
+    animation-duration: .5s !important;
+    animation-fill-mode: both;
+}
+
+.wobble {
+    animation-duration: .5s !important;
+    animation-fill-mode: both;
+}
+
+.ct-series-a .ct-slice-donut-solid {
+    stroke: #00a79d;
+    fill: #00a79d;
+
+}
+
+.ct-series-b .ct-slice-donut-solid {
+    stroke: #1c75bc;
+    fill: #1c75bc;
+}
+
+.ct-series-c .ct-slice-donut-solid {
+    stroke: #92278f;
+    fill: #92278f;
+}
+
+.ct-series-d .ct-slice-donut-solid {
+    stroke: #be1e2d;
+    fill: #be1e2d;
+}
+
+.ct-series-e .ct-slice-donut-solid {
+    stroke: #f15a29;
+    fill: #f15a29;
+}
+
+.ct-series-f .ct-slice-donut-solid {
+    stroke: #be1e2d;
+    fill: #be1e2d;
+}
+
+.ct-label {
+    fill: white;
+}
+
+#dashBoardPreloader {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 20vh;
+}
+
+.modalButtons {
+    margin-top: -1% !important;
+    margin-left: 2%;
+}
+
+.addBankMargin {
+    margin-right: 2%;
+}
+
+#profile {
+    margin-left: 30%;
+    width: 40%;
+}
+
+.fakeSubmit {
+    background: #3fb86c;
+    color: white;
+    border: outset #36a24d;
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+    text-shadow: none;
+}
+
+.fakeSubmit2 {
+    background: #3fb86c;
+    color: white;
+    border: outset #36a24d;
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+    text-shadow: none;
+    padding-top: 8%;
+    padding-left: 15%;
+}
+
+.fake-logo {
+    margin-top: -8%;
+    margin-bottom: 5%;
+}
+
+.no-uppercase {
+    text-transform: none;
+}
+
+.grey.lighten-3 {
+    background-color: #f7f7f7 !important;
+}
+
+.add-icon, .bank-remove-icon {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 2.2em !important;
+    opacity: 0.9;
+}

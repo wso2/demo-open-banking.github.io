@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="WSO2">
+    
+    <title>Accounts Central | Login</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="App/assets/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="App/assets/css/chartist.min.css" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="App/assets/css/style.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600" rel="stylesheet"/>
+    <link rel="stylesheet" href="App/assets/css/font-wso2.css"/>
+</head>
+<body class="containerBG login">
+    
+<div id="app">
+    <div>
+        <div id="landing">
+            <div class="container widthControl animated fadeInLeft" id="logins1">
+                <div class="col s6 offset-s6 transparent login-middle-pane-left card-panel">
+                    <div class="padding15 animated" id="padding" style="text-align: center">
+												<img src="App/assets/images/logo.png" class="logo">
+                        <h5 class="blue-grey-text flow-text text-darken-4 center-align" style="margin-top: 0;">AISP Solutions</h5><br/>
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12"><i class="fw fw-mail prefix"></i>
+                                    <input type="email" value="johndoe@email.com" id="email" class=""/>
+                                    <label class="grey-text text-darken-4 center-align middle-pane-text">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12"><i class="fw fw-key prefix"></i>
+                                    <input type="password" value="password" id="password" class="validate"/>
+                                    <label class="grey-text text-darken-4 center-align middle-pane-text">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6" style="text-align: left; margin-left: 42px;"><a href="dashboard.html">
+                                    <span class="waves-effect waves-light btn" id="submit">Login</span></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<script src="App/assets/js/compiled/jquery.min.js"></script>
+<script type="text/javascript" src="App/assets/js/compiled/materialize.min.js"></script>
+<script>
+    window.parent.$("#demo-desc").html('Assume you are logging in to an AISP application. You can then check the aggregated details of multiple banks');
+    window.parent.$("iframe#mobile-content").attr('data-prevsrc',  'demos/aisp/index.html');
+</script>
+
+
+</body>
+</html>
