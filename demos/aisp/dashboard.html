@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Account Aggregator</title>
+
+    <link href="App/assets/css/icon.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="App/assets/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="App/assets/css/chartist.min.css" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="App/assets/css/style.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600" rel="stylesheet"/>
+    <link rel="stylesheet" href="App/assets/css/font-wso2.css"/>
+
+    <script type="text/javascript" src="App/assets/js/compiled/chartist.min.js"></script>
+    <script src="App/assets/js/compiled/jquery.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/compiled/materialize.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/compiled/nv.d3.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/compiled/moment.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/AccountAggregator.js"></script>
+</head>
+
+<body class="containerBG" id="body">
+<div id="app">
+    <div data-reactroot="">
+        <div class=" viewPortAll row col s12 ">
+            <nav id="navigator">
+                <div class="nav-wrapper teal">
+                    <div id="titleContainer1" class="hide-on-small-and-down">
+                        <img src="App/assets/images/logo2.png" class="logo2">
+                    </div>
+                    <div id="titleContainer2" class="hide-on-med-and-up">
+                        <a class="brand-logo left" id="logos2">
+                            <i class="fw fw-dashboard" style="float: none"></i>Dashboard
+                        </a>
+                    </div>
+                    <ul class="right navigatorIcons">
+                        <li id="Logout" class="teal lighten-1 modal-trigger ">
+                            <a href="banks.html" class="tooltipped" data-position="bottom" data-delay="10"
+                               data-tooltip="Add Banks">
+                                <i class="fw fw-add"></i> Add Bank</a>
+                        </li>
+                        <li id="addbank" class="teal modal-trigger ">
+                            <a href="index.html" class="tooltipped" data-position="bottom" data-delay="10"
+                               data-tooltip="Logout">
+                                <i class="fw fw-activate"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="col s11 animated fadeInUp" id="dashboard">
+                <div id="message"></div>
+                <div class="col s12 " id="dashboardContent">
+                    <div class="row col s12">
+                        <div class="col s8 balanceHalfBoard">
+                            <div class=" col s12 ">
+                                <div class="col s6  boards leftPaddingControl hide-on-small-and-down"
+                                     id="balanceByBanks">
+                                    <div class="row col s12 boardTitle leftPaddingControl">
+                                        <p class=" blue-grey-text flow-text text-darken-4 left-align marginControl leftPaddingControl">
+                                            Your Balance History</p>
+                                    </div>
+                                    <div id="donut" class="ct-chart ct-minor-sixth">
+                                        <svg width="100%"
+                                             height="100%" class="ct-chart-line" style="width: 100%; height: 100%;">
+                                            <g class="ct-grids">
+                                                <line x1="50" x2="50" y1="15" y2="116.578125"
+                                                      class="ct-grid ct-horizontal"></line>
+                                                <line x1="155.1625" x2="155.1625" y1="15" y2="116.578125"
+                                                      class="ct-grid ct-horizontal"></line>
+                                                <line x1="260.325" x2="260.325" y1="15" y2="116.578125"
+                                                      class="ct-grid ct-horizontal"></line>
+                                                <line x1="365.4875" x2="365.4875" y1="15" y2="116.578125"
+                                                      class="ct-grid ct-horizontal"></line>
+                                                <line x1="470.65" x2="470.65" y1="15" y2="116.578125"
+                                                      class="ct-grid ct-horizontal"></line>
+                                                <line y1="116.578125" y2="116.578125" x1="50" x2="575.8125"
+                                                      class="ct-grid ct-vertical"></line>
+                                                <line y1="82.71875" y2="82.71875" x1="50" x2="575.8125"
+                                                      class="ct-grid ct-vertical"></line>
+                                                <line y1="48.859375" y2="48.859375" x1="50" x2="575.8125"
+                                                      class="ct-grid ct-vertical"></line>
+                                                <line y1="15" y2="15" x1="50" x2="575.8125"
+                                                      class="ct-grid ct-vertical"></line>
+                                            </g>
+                                            <g>
+                                                <g class="ct-series ct-series-a">
+                                                    <path d="M50,85.834C67.976,85.383,85.953,85.457,103.929,84.48C112.918,83.992,121.906,71.034,130.894,63.352C133.89,60.791,136.886,55.32,139.882,55.138C147.373,54.682,154.863,54.75,162.353,54.529C166.847,54.396,171.341,54.274,175.835,54.096C183.326,53.8,190.816,53.482,198.306,52.877C201.302,52.635,204.298,52.025,207.294,51.733C213.287,51.149,219.279,50.587,225.271,50.378C231.263,50.17,237.255,50.096,243.247,49.972C255.232,49.723,267.216,49.596,279.2,49.295C291.185,48.995,303.169,48.79,315.153,47.941C327.138,47.093,339.122,29.531,351.106,26.813C372.079,22.057,393.051,18.777,414.024,18.599C467.954,18.141,521.883,18.193,575.813,17.99"
+                                                          class="ct-line"></path>
+                                                    <line x1="50" y1="85.83448968750002" x2="50.01"
+                                                          y2="85.83448968750002" class="ct-point"
+                                                          ct:value="1487615400000,15453.99"></line>
+                                                    <line x1="103.92948717948718" y1="84.48011468750002"
+                                                          x2="103.93948717948719" y2="84.48011468750002"
+                                                          class="ct-point" ct:value="1488652200000,15473.99"></line>
+                                                    <line x1="130.89423076923077" y1="63.35186468750002"
+                                                          x2="130.90423076923076" y2="63.35186468750002"
+                                                          class="ct-point" ct:value="1489170600000,15785.99"></line>
+                                                    <line x1="139.88247863247864" y1="55.13758031250007"
+                                                          x2="139.89247863247863" y2="55.13758031250007"
+                                                          class="ct-point"
+                                                          ct:value="1489343400000,15907.289999999999"></line>
+                                                    <line x1="162.3530982905983" y1="54.528788750000075"
+                                                          x2="162.3630982905983" y2="54.528788750000075"
+                                                          class="ct-point"
+                                                          ct:value="1489775400000,15916.279999999999"></line>
+                                                    <line x1="175.8354700854701" y1="54.096065937500114"
+                                                          x2="175.84547008547008" y2="54.096065937500114"
+                                                          class="ct-point"
+                                                          ct:value="1490034600000,15922.669999999998"></line>
+                                                    <line x1="198.30608974358975" y1="52.87712843750012"
+                                                          x2="198.31608974358974" y2="52.87712843750012"
+                                                          class="ct-point"
+                                                          ct:value="1490466600000,15940.669999999998"></line>
+                                                    <line x1="207.29433760683762" y1="51.73268156250015"
+                                                          x2="207.3043376068376" y2="51.73268156250015" class="ct-point"
+                                                          ct:value="1490639400000,15957.569999999998"></line>
+                                                    <line x1="225.27083333333334" y1="50.37830656250014"
+                                                          x2="225.28083333333333" y2="50.37830656250014"
+                                                          class="ct-point"
+                                                          ct:value="1490985000000,15977.569999999998"></line>
+                                                    <line x1="243.24732905982907" y1="49.971994062500144"
+                                                          x2="243.25732905982906" y2="49.971994062500144"
+                                                          class="ct-point"
+                                                          ct:value="1491330600000,15983.569999999998"></line>
+                                                    <line x1="279.20032051282055" y1="49.29548375000016"
+                                                          x2="279.21032051282054" y2="49.29548375000016"
+                                                          class="ct-point"
+                                                          ct:value="1492021800000,15993.559999999998"></line>
+                                                    <line x1="315.15331196581195" y1="47.941108750000154"
+                                                          x2="315.16331196581194" y2="47.941108750000154"
+                                                          class="ct-point"
+                                                          ct:value="1492713000000,16013.559999999998"></line>
+                                                    <line x1="351.1063034188034" y1="26.812858750000146"
+                                                          x2="351.1163034188034" y2="26.812858750000146"
+                                                          class="ct-point"
+                                                          ct:value="1493404200000,16325.559999999998"></line>
+                                                    <line x1="414.02403846153845" y1="18.598574375000197"
+                                                          x2="414.03403846153844" y2="18.598574375000197"
+                                                          class="ct-point"
+                                                          ct:value="1494613800000,16446.859999999997"></line>
+                                                    <line x1="575.8125" y1="17.989782812500096" x2="575.8225"
+                                                          y2="17.989782812500096" class="ct-point"
+                                                          ct:value="1497724200000,16455.85"></line>
+                                                </g>
+                                            </g>
+                                            <g class="ct-labels">
+                                                <foreignobject style="overflow: visible;" x="50" y="121.578125"
+                                                               width="105.1625" height="20"><span
+                                                        class="ct-label ct-horizontal ct-end"
+                                                        style="width: 105px; height: 20px;">Feb 21</span>
+                                                </foreignobject>
+                                                <foreignobject style="overflow: visible;" x="155.1625" y="121.578125"
+                                                               width="105.1625" height="20"><span
+                                                        class="ct-label ct-horizontal ct-end"
+                                                        style="width: 105px; height: 20px;">Mar 16</span>
+                                                </foreignobject>
+                                                <foreignobject style="overflow: visible;" x="260.325" y="121.578125"
+                                                               width="105.16250000000002" height="20"><span
+                                                        class="ct-label ct-horizontal ct-end"
+                                                        style="width: 105px; height: 20px;">Apr 8</span></foreignobject>
+                                                <foreignobject style="overflow: visible;" x="365.4875" y="121.578125"
+                                                               width="105.16249999999997" height="20"><span
+                                                        class="ct-label ct-horizontal ct-end"
+                                                        style="width: 105px; height: 20px;">May 2</span></foreignobject>
+                                                <foreignobject style="overflow: visible;" x="470.65" y="121.578125"
+                                                               width="105.16250000000002" height="20"><span
+                                                        class="ct-label ct-horizontal ct-end"
+                                                        style="width: 105px; height: 20px;">May 25</span>
+                                                </foreignobject>
+                                                <foreignobject style="overflow: visible;" y="82.71875" x="10"
+                                                               height="33.859375" width="30"><span
+                                                        class="ct-label ct-vertical ct-start"
+                                                        style="height: 34px; width: 30px;">15000</span></foreignobject>
+                                                <foreignobject style="overflow: visible;" y="48.859375" x="10"
+                                                               height="33.859375" width="30"><span
+                                                        class="ct-label ct-vertical ct-start"
+                                                        style="height: 34px; width: 30px;">15500</span></foreignobject>
+                                                <foreignobject style="overflow: visible;" y="15" x="10"
+                                                               height="33.859375" width="30"><span
+                                                        class="ct-label ct-vertical ct-start"
+                                                        style="height: 34px; width: 30px;">16000</span></foreignobject>
+                                                <foreignobject style="overflow: visible;" y="-15" x="10" height="30"
+                                                               width="30"><span class="ct-label ct-vertical ct-start"
+                                                                                style="height: 30px; width: 30px;">16500</span>
+                                                </foreignobject>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col s6 boards" id="balanceSummary">
+                                    <div class="row col s12 boardTitle"><p
+                                            class="blue-grey-text flow-text text-darken-4 left-align marginControl">
+                                        Total Balance</p>
+                                    </div>
+                                    <ul class="collection" id="balanceItems2">
+                                        <li class="collection-item avatar marginControl transparent">
+                                            <i class="material-icons  circle green hide-on-small-and-down">call_received</i>
+                                            <span class="blue-grey-text flow-text text-darken-4 left-align summaryTexts">Cash</span>
+                                            <a class="citizenCompliments secondary-content totalCurrency flow-text green-text text-darken-4">
+                                                <span>18,960.34 EUR</span>
+                                            </a>
+                                            <a class="citizenComponents secondary-content totalCurrency flow-text green-text text-darken-4">
+                                                <span>21,510.3 EUR</span>
+                                            </a>
+                                        </li>
+                                        <li class="collection-item avatar marginControl transparent">
+                                            <i class="material-icons circle red hide-on-small-and-down">call_made</i>
+                                            <span class="blue-grey-text flow-text text-darken-4 left-align summaryTexts">Credit</span>
+                                            <a class="secondary-content creditCurrency flow-text red-text text-darken-4">
+                                                <span>2,780.03 EUR</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="row col s12 transparent" id="updatesContainer">
+                                    <div class="row col s12 boardTitle marginControl leftPaddingControl">
+                                        <div class="col s4 leftPaddingControl">
+                                            <p class="blue-grey-text text-darken-4 flow-text left-align marginControl leftPaddingControl">
+                                                Notifications
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <ul class="collection accountsScroll scrollable" id="updatesBoard">
+                                        <li class="collection-item avatar lighten-1 cursors animated bounce orange">
+                                            <i class="fw fw-notification updatesIcon"></i>
+                                            <span class="flow-text cardTitle black-text">Security</span>
+                                            <a class="btn-floating orange right"><i class="material-icons">cancel</i>
+                                            </a>
+                                            <p class="grey-text text-darken-4 flow-text cardContent">
+                                                You have not set up <b>2 factor authentication.</b> Set
+                                                it up to protect your account!
+                                            </p>
+                                        </li>
+                                        <li class="collection-item avatar lighten-1 cursors animated bounce red">
+                                            <i class="fw fw-cancel updatesIcon"></i>
+                                            <span class="flow-text cardTitle black-text">Standing Order</span>
+                                            <a class="btn-floating red right"><i class="material-icons">cancel</i></a>
+                                            <p class="grey-text text-darken-4 flow-text cardContent">
+                                                You have a standing order set up for <b>Apple Subscription</b>
+                                                this saturday! But bank balance is not enough!
+                                                Fix it by Saturday.
+                                            </p>
+                                        </li>
+                                        <li class="collection-item avatar lighten-1 cursors animated bounce green" style="display: none;">
+                                            <i class="fw fw-check updatesIcon"></i><span
+                                                class="flow-text cardTitle black-text">Standing Order</span>
+                                            <a class="btn-floating green right">
+                                                <i class="material-icons">cancel</i></a>
+                                            <p class="grey-text text-darken-4 flow-text cardContent">
+                                                Your standing order of <b>Netflix Subscription</b> was
+                                                passed successfully last week!
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s4 hide-on-med-and-down" id="balanceHistory2">
+                            <div class="col s6 boards" id="balanceHistory">
+                                <div class="row col s12 boardTitle" id="chartContainer">
+                                    <div class="col s12">
+                                        <p class="blue-grey-text flow-text text-darken-4 left-align marginControl">
+                                            Balances By Banks</p>
+                                    </div>
+                                </div>
+                                <img class="citizenComponents responsive-img imageChart" src="App/assets/images/chart.png">
+                                <img class="citizenCompliments responsive-img imageChart" src="App/assets/images/chartLess.png">
+                                <div id="chart" class="ct-chart ct-perfect-fourth">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col s12 boardsContainer">
+                        <div class="col s4 boards " id="accountsBoard">
+                            <div class="row col s12 boardTitle">
+                                <div class="col s4">
+                                    <p
+                                            class="blue-grey-text text-darken-4 flow-text  left-align marginControl">
+                                        Accounts</p></div>
+                            </div>
+                            <ul class="collection accountsScroll scrollable">
+                                <li class="collection-item avatar grey lighten-3 animated bounce">
+                                    <img
+                                            src="App/assets/images/bankofipsum_logo3.png" alt=""
+                                            class="circle"><span class="flow-text cardTitle black-text">EUDC Bank</span>
+
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        1020 3345 9980 3432 9084<br>Checking Account</p>
+
+                                    <a class="secondary-content cardInsideNormal flow-text"><span>9,894.00 EUR</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/development_bank.png" alt=""
+                                        class="circle"><span class="flow-text cardTitle black-text">Development Bank</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        3804 0074 0532 0130 0032<br>Saving Account</p>
+                                    <a class="secondary-content cardInsideNormal flow-text"><span>6,065.05 EUR</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/bankofipsum_logo3.png" alt=""
+                                        class="circle"><span class="flow-text cardTitle black-text">EUDC Bank</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        1020 3348 0922 5556 3211<br>Saving Account</p>
+                                    <a class="secondary-content cardInsideNormal flow-text"><span>3,000.67 EUR</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/lorembank_logo3.png" alt=""
+                                        class="circle"><span class="flow-text cardTitle black-text">Citizen Bank</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        1327 9432 8432 8941 4387<br>Fixed Account</p>
+                                    <a class="secondary-content cardInsideNormal flow-text"><span>2,460.00 USD</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/bankofipsum_logo3.png" alt=""
+                                        class="circle"><span class="flow-text cardTitle black-text">EUDC Bank</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        4245 5628 432 8965 2341<br>Loan Account
+                                    </p>
+                                    <a class="secondary-content cardInsideNormal flow-text red-text"><span>- 2,780.03 GBP</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/lorembank_logo3.png" alt=""
+                                        class="circle"><span class="flow-text cardTitle black-text">Citizen Bank</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        8941 8004 9980 2323 0089<br>Loan Account
+                                    </p>
+                                    <a class="secondary-content cardInsideNormal flow-text"><span>89.96 USD</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s4  boards" id="transactionBoard">
+                            <div class="row col s12 boardTitle"><p
+                                    class="blue-grey-text flow-text text-darken-4 left-align marginControl">
+                                Transactions</p></div>
+                            <ul class="collection accountsScroll scrollable">
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/netflix.png" alt=""
+                                        class="circle grey lighten-2">
+                                    <span class="flow-text cardTitle black-text">Netflix Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">
+                                        8 Months Ago<br>
+                                        EUDC Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>9.99 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/starbucks.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Starbucks</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>20.00 EUR</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/lamborgini.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Car Painting</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        EUDC Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>312.00 EUR</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/beats.png" alt=""
+                                        class="circle grey lighten-2"><span
+                                        class="flow-text cardTitle black-text">Headphone</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        EUDC Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>121.30 EUR</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/burger.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Burger King</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>8.99 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/starbucks.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Starbucks Latte</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 219 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>6.39 USD</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/apple.png" alt=""
+                                        class="circle grey lighten-2"><span
+                                        class="flow-text cardTitle black-text">Apple Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 227 -->EUDC Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>18.00 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/ea.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">
+                                    EA Steam Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent ">
+                                        9 Months Ago<br>
+                                        <!-- 235 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>16.90 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/lg.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">LG Monthly Payment</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 243 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>20.00 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/motorola.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Phone Cover</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 251 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>6.00 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/netflix.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Netflix Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 259 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>9.99 USD</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/starbucks.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Starbucks</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 267 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>20.00 EUR</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/lamborgini.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Car Painting</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 275 -->EUDC Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>312.00 EUR</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/beats.png" alt=""
+                                        class="circle grey lighten-2"><span
+                                        class="flow-text cardTitle black-text">Headphone</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 283 -->EUDC Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>121.30 EUR</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/burger.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Burger King</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent">9 Months Ago<br>
+                                        <!-- 291 -->Citizen Bank</p><a
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>8.99 USD</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s4 boards" id="standingOrderBoard">
+                            <div class="row col s12 boardTitle"><p
+                                    class="blue-grey-text flow-text text-darken-4 left-align marginControl">Standing
+                                Orders</p></div>
+                            <ul class="collection accountsScroll scrollable">
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/apple.png" alt=""
+                                        class="circle grey lighten-2"><span
+                                        class="flow-text cardTitle black-text">Apple Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent"><!-- 302 -->
+                                        Every Weekend Day<!-- 303 -->
+                                        <br><!-- 305 -->EUDC Bank
+                                    </p><a href="http://localhost:9999/dashboard#!"
+                                           class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>18.00 USD</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/netflix.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Netflix Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent"><!-- 312 -->
+                                        Every Month End<!-- 313 -->
+                                        <br><!-- 315 -->EUDC Bank</p><a
+                                            href="http://localhost:9999/dashboard#!"
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>9.99 GBP</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/burger.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">Burger King Payment</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent"><!-- 322 -->
+                                        Every Month Beginning<!-- 323 -->
+                                        <br><!-- 325 -->Citizen Bank
+                                    </p><a href="http://localhost:9999/dashboard#!"
+                                           class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>8.99 GBP</span></a>
+                                </li>
+                                <li class="citizenComponents collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/lg.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">LG Monthly Payment</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent"><!-- 332 -->
+                                        Every Month Beginning<!-- 333 -->
+                                        <br><!-- 335 -->Citizen Bank
+                                    </p><a href="http://localhost:9999/dashboard#!"
+                                           class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>20.00 GBP</span></a>
+                                </li>
+                                <li class="collection-item avatar grey lighten-3 animated bounce"><img
+                                        src="App/assets/images/Icons/ea.png" alt=""
+                                        class="circle grey lighten-2"><span class="flow-text cardTitle black-text">EA Steam Subscription</span>
+                                    <p class="grey-text text-darken-2 flow-text cardContent"><!-- 342 -->
+                                        Every Month End<!-- 343 -->
+                                        <br><!-- 345 -->EUDC Bank</p><a
+                                            href="http://localhost:9999/dashboard#!"
+                                            class="secondary-content cardInsideNormal flow-text standingSecondaryContent"><span>16.90 GBP</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- react-empty: 348 --></div>
+</div>
+    
+<script>
+    var foo = (getParameterByName('bank')) ? getParameterByName('bank').charAt(0) : 0;
+
+    $(document).ready(function () {
+        if (foo == 1){
+            $('.citizenCompliments').remove();
+        } else if (foo == 2 ) {
+            $('.citizenComponents').remove();
+        } else if (foo == null || foo == 9) {
+            $('.citizenComponents').remove();
+        } else if (foo == 0) {
+            $('.citizenComponents').remove();
+        }
+        
+        function hide(){
+            $('#message').css({
+                visibility: 'hidden',
+                maxHeight: 0
+            });
+            $('#messageInner').css({
+                visibility: 'hidden',
+                'max-height': 0,
+                padding: 0,
+                margin: 0
+            });   
+        }
+        
+        $('#message').on('click', 'a.btn-floating', function(){
+            hide();
+        });
+        
+        if (foo == 1) {
+            $('#message').html('<p id="messageInner" class="green-text flow-text text-darken-4 left-align marginControl alert success">' +
+                'Citizen Bank is added successfully!!! <a class="btn-floating green">' +
+                '<i class="material-icons">cancel</i></a></p>');
+        } else if (foo == 2) {
+            $('#message').html('<p id="messageInner" class="green-text flow-text text-darken-4 left-align marginControl alert success">' +
+                'EUDC Bank was already added!!! <a class="btn-floating green">' +
+                '<i class="material-icons">cancel</i></a></p>');
+        } else if (foo == 9) {
+            $('#message').html('<p id="messageInner" class="green-text flow-text text-darken-4 left-align marginControl alert error">' +
+                'Adding Bank Failed!!! <a class="btn-floating red">' +
+                '<i class="material-icons">cancel</i></a></p>');;
+        } else if (foo == 0) {
+            hide();
+            //$('#dashboard').css('margin-top','-1%');
+        }
+    });   
+</script>
+
+<script>
+    window.parent.$("#demo-desc").html('This is the dashboard view of account information services provider application. You can click (+) on top right corner to add new banks');
+    window.parent.$("iframe#mobile-content").attr('data-prevsrc',  'demos/aisp/index.html');
+</script>
+
+
+</body>
+</html>

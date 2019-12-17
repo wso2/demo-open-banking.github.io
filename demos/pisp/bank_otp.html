@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="bank">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="WSO2">
+
+    <title><!-- Title will update dynamically --></title>
+
+    <link rel="stylesheet" href="libs/bootstrap-4.0.0/css/bootstrap.min.css" id="bootstrap" disabled="true">
+    <link rel="stylesheet" href="libs/font-wso2-1.3.0/css/font-wso2.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link rel="stylesheet" href="" id="theme">
+  </head>
+  <body style="display: none;">
+
+   <div class="page-content-wrapper">
+        <div class="container">
+
+            <div class="login-form-wrapper">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="brand-container add-margin-bottom-5x">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <img src="" class="logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 login">
+                        <div class="data-container">
+                            <form class="form-horizontal" id="mainLoginForm" autocomplete="off">
+                                <h3>Verify Login</h3>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <p>Enter your One-Time Password(OTP) which we have sent to your mobile number ending with ******239</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="text" id="otp" name="otp" title="otp" style="width: 200px;" class="form-control input-sm" value="1234" placeholder="E.g. 1234">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <a href="bank_consent.html" class="btn btn-primary" role="main-action">OK</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+              <div class="container-fluid">
+                <p><span class="bank-name"></span> | © <script>document.write(new Date().getFullYear());</script> Powered by <a title="WSO2" href="http://wso2.com/" target="_blank"><i class="icon fw fw-wso2"></i></a> Open Banking</p>
+              </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="libs/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="libs/popperjs-1.11.0/popper.min.js"></script>
+    <script src="libs/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/demos.js"></script>
+    <script>
+        window.parent.$("#demo-desc").html('As a part of the verification process, the bank prompts you for Strong Customer Authentication (SCA).');
+        window.parent.$("iframe#mobile-content").attr('data-prevsrc',  'demos/pisp/bank.html');
+    </script>
+  </body>
+</html>

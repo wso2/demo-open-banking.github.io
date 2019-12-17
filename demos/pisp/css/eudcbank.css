@@ -1,0 +1,63 @@
+body {
+    background-color: #EFEFEF;
+    color: #444;
+    font-family: 'Arial', serif;
+    display: block !important;
+}
+
+.logo {
+    max-width: 200px;
+    margin: 70px auto 30px;
+}
+
+.form-control:focus {
+    color: #444;
+    border-color: #7DDCFF !important;
+    font-family: sans-serif;
+}
+
+a {
+    color: #7DDCFF;
+}
+
+.btn,
+.btn:focus {
+    border: none;
+    cursor: pointer;
+    box-shadow: none !important; 
+}
+
+.btn-primary,
+.btn-primary:focus {
+    background: #7DDCFF;
+    box-shadow: none !important;
+}
+
+.btn-primary:hover {
+    background: #7DDCFF;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+.data-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 15px;
+}
+
+footer {
+    margin: 15px;
+}
+
+footer .icon {
+    font-size: 37px;
+    vertical-align: middle;
+    color: #24580b;
+    text-decoration: none;
+}
+
+h3 {
+    margin: 15px;
+}

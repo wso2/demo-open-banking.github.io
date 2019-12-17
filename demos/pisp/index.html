@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="WSO2">
+      
+    <title>ShoppingCart | Checkout</title>
+
+    <link rel="stylesheet" href="libs/bootstrap-4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/font-wso2-1.3.0/css/font-wso2.min.css">
+    <link rel="stylesheet" href="css/shoppingcart.css">
+  </head>
+  <body>
+    
+   <nav class="navbar navbar-expand navbar-dark">
+      <a class="navbar-brand" href="#">
+          <img src="img/logo.png" class="logo" alt="ShoppingCart">
+      </a>
+
+      <div class="collapse navbar-collapse text" id="navbarDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Checkout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+    <nav class="navbar navbar-expand navbar-dark navbar-secondary">
+      <div class="collapse navbar-collapse text" id="navbarDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="search-right ml-auto">
+            <div class="cart box_1 clearfix">
+                <a>
+                <h3> <div class="total">
+                    <span class="simpleCart_total">€ 260.00</span></div>
+                    <i class="fw fw-cart"></i></h3>
+                </a>
+                <p><a href="javascript:;" class="simpleCart_empty">3 items in the Cart</a></p>
+            </div>
+        </div>
+      </div>
+    </nav>
+      
+    <div class="banner">
+      <div class="container-fluid">
+        <h1>Checkout</h1>
+        <em></em>
+        <h2>Home<label>/</label>Checkout</h2>
+      </div>
+    </div>
+      
+    <div>
+        <table class="table-list">
+           <thead>
+               <tr>
+                 <th class="table-grid">Item</th>
+                 <th>Delivery </th>
+                 <th>Subtotal</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr class="cart-header">
+                 <td class="ring-in clearfix">
+                    <a class="at-in"><img src="img/ch.jpg" class="img-fluid" alt=""></a>
+                    <div class="sed">
+                       <h5>Kodak EasyShare V550</h5>
+                       <p>5MP Camera. C-VARIOGON 3X optical zoom lens.</p>
+                    </div>
+                 </td>
+                 <td>FREE SHIPPING</td>
+                 <td class="item_price text-right">€ 60.00</td>
+                 <td class="add-check"><a class="btn btn-secondary" href="#">Remove</a></td>
+              </tr>
+              <tr class="cart-header1">
+                 <td class="ring-in clearfix">
+                    <a class="at-in"><img src="img/ch2.jpg" class="img-fluid" alt=""></a>
+                    <div class="sed">
+                       <h5>HP Officejet Pro X551dw</h5>
+                       <p>Up to 70 ppm - black draft. Up to 70 ppm - color draft. Up to 42 ppm</p>
+                    </div>
+                 </td>
+                 <td>FREE SHIPPING</td>
+                 <td class="item_price text-right">€ 90.00</td>
+                 <td class="add-check"><a class="btn btn-secondary" href="#">Remove</a></td>
+              </tr>
+              <tr class="cart-header2">
+                 <td class="ring-in clearfix">
+                    <a class="at-in"><img src="img/ch1.jpg" class="img-fluid" alt=""></a>
+                    <div class="sed">
+                       <h5>Dell Latitude E6430</h5>
+                       <p>Intel® Core™ i7, 12GB RAM, 500GB SSD</p>
+                    </div>
+                 </td>
+                 <td>FREE SHIPPING</td>
+                 <td class="item_price text-right">€ 110.00</td>
+                 <td class="add-check"><a class="btn btn-secondary" href="#">Remove</a></td>
+              </tr>
+              <tr class="cart-header2">
+                  <td colspan="2" class="text-right">Total:</td>
+                  <td colspan="2"><h3>€ 260.00</h3></td>
+              </tr>
+           </tbody>
+        </table>
+        <div class="d-block mx-auto text-center mt-5 mb-5">
+            <a class="btn btn-primary btn-lg" href="directpay.html" role="main-action">Direct Pay</a>
+        </div>
+    </div>
+      
+    <!-- footer -->
+    <footer class="footer fixed text-center">
+      <div class="container-fluid">
+        <p>ShoppingCart.co.uk | &copy; <script>document.write(new Date().getFullYear());</script></p>
+      </div>
+    </footer>
+
+    <script src="libs/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="libs/popperjs-1.11.0/popper.min.js"></script>
+    <script src="libs/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/demos.js"></script>
+    <script>
+        window.parent.$("#demo-desc").html('Assume you are done adding your items to the shopping cart. You can then click the checkout/pay option.');
+        window.parent.$("iframe#mobile-content").attr('data-prevsrc',  'demos/pisp/index.html');
+    </script>
+  </body>
+</html>
