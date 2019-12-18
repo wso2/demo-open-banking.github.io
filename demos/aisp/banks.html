@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-reactroot="" data-react-checksum="-297169327">
+<head>
+    <meta/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Account Aggregator</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="App/assets/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="App/assets/css/chartist.min.css" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="App/assets/css/style.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600" rel="stylesheet"/>
+    <link rel="stylesheet" href="App/assets/css/font-wso2.css"/>
+
+    <script type="text/javascript" src="App/assets/js/compiled/chartist.min.js"></script>
+    <script src="App/assets/js/compiled/jquery.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/compiled/materialize.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/compiled/nv.d3.min.js"></script>
+    <script type="text/javascript" src="App/assets/js/compiled/moment.min.js"></script>
+</head>
+<body class="containerBG">
+<div id="app">
+    <div>
+        <div>
+            <nav id="navigator">
+                <div class="nav-wrapper teal">
+                    <div id="titleContainer1" class="hide-on-small-and-down">
+                        <img src="App/assets/images/logo2.png" class="logo2">
+                    </div>
+
+                    <div id="titleContainer2" class="hide-on-med-and-up">
+                        <a class="brand-logo left" id="logos2">
+                            <i class="fw fw-add" style="float: none"></i>
+                            Add Banks
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container widthShrink">
+                <div>
+                    <div class="row col s6  offset-s6  transparent add-bank-pane {/*card-panel*/}">
+                        <div id="bankPane">
+                            <div class="padding15">
+                                <h3 class="blue-grey-text flow-text text-darken-4 left-align">
+                                    Please select the bank that you would like to aggregate
+                                </h3>
+                                <div class="row">
+                                </div>
+                                <div id="bankList" class="row">
+                                    <div class="col s12 m3 cardContainer">
+                                        <a id="bank1" href="Banks/bank.html?bank=1">
+                                            <div class="card teal white cardBox" id="card1">
+                                                <i class="fw fw-add fw-lg fw-inverse fw-helper fw-helper-circle add-icon"></i>
+                                                <div class="card-image">
+                                                    <img src="App/assets/images/lorembank_logo3.png"/>
+                                                    <div class="row">
+                                                        <h6 class="card-text card-title blue-grey-text text-darken-4 center-align bankCardTitle" style="width: 100%">
+                                                            Citizen Bank
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                </div>
+                                <h5 class="blue-grey-text flow-text text-darken-4 left-align">
+                                    Added banks
+                                </h5>
+                                <div class="row">
+                                </div>
+                                <div id="bankList" class="row">
+                                    <div class="col s12 m2 cardContainer">
+                                        <a id="bank0" href="Banks/bank.html?bank=2">
+                                            <div class="card teal white cardBox" id="card0">
+                                                <i class="fw fw-minus fw-lg fw-inverse fw-helper fw-helper-circle text-danger add-icon"></i>
+                                                <div class="card-image">
+                                                    <img src="App/assets/images/bankofipsum_logo3.png"/>
+                                                    <div class="row">
+                                                        <h6 class="card-text card-title blue-grey-text text-darken-4 center-align bankCardTitle" style="width: 100%">
+                                                            EUDC Bank
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col s12 m2 cardContainer">
+                                        <a id="bank0" href="Banks/bank.html?bank=2">
+                                            <div class="card teal white cardBox" id="card0">
+                                                <div class="card-image">
+                                                    <img src="App/assets/images/development_bank.png"/>
+                                                    <div class="row">
+                                                        <h6 class="card-text card-title blue-grey-text text-darken-4 center-align bankCardTitle" style="width: 100%">
+                                                            Development Bank
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.parent.$("#demo-desc").html('All banks supported by AISP application will be shown here. Assume you have a bank account in one of these banks. Click on a bank to initiate linking process');
+    window.parent.$("iframe#mobile-content").attr('data-prevsrc',  'demos/aisp/dashboard.html');
+</script>
+
+
+</body>
+</html>
