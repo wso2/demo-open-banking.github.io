@@ -1,0 +1,28 @@
+{
+   "Data":{
+      "Permissions":[
+         "ReadAccountsBasic",
+         "ReadAccountsDetail",
+         "ReadBalances",
+         "ReadBeneficiariesDetail",
+         "ReadDirectDebits",
+         "ReadProducts",
+         "ReadStandingOrdersDetail",
+         "ReadTransactionsCredits",
+         "ReadTransactionsDebits",
+         "ReadTransactionsDetail",
+         "ReadOffers",
+         "ReadPAN",
+         "ReadParty",
+         "ReadPartyPSU",
+         "ReadScheduledPaymentsDetail",
+         "ReadStatementsDetail"
+      ],
+      "ExpirationDateTime":"2020-12-16T14:19:34.359Z",
+      "TransactionFromDateTime":"2019-11-16T14:19:34.359Z",
+      "TransactionToDateTime":"2019-12-16T14:19:34.359Z"
+   },
+   "Risk":{
+
+   }
+}

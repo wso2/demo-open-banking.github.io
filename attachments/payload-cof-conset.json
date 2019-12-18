@@ -1,0 +1,11 @@
+{
+   "Data":{
+      "ExpirationDateTime":"2020-12-07T00:00:00+00:00",
+      "DebtorAccount":{
+         "SchemeName":"SortCodeAccountNumber",
+         "Identification":"30080012343456",
+         "Name":"ACME Inc",
+         "SecondaryIdentification":"0001"
+      }
+   }
+}

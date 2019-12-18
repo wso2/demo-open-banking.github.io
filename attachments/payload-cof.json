@@ -1,0 +1,10 @@
+{
+   "Data":{
+      "ConsentId":"0",
+      "Reference":"RefCOF",
+      "InstructedAmount":{
+         "Amount":"10.00",
+         "Currency":"GBP"
+      }
+   }
+}
