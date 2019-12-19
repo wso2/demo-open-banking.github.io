@@ -9,7 +9,7 @@ toc: true
 
 This guide walks you through the WSO2 Open Banking solution.
 
-If you want to start from scratch by creating your own application, start from [Create an Application](#step-1-create-an-application). If not, start from the [Subscribe to APIs](#step-2-subscribe-to-apis) section where you can use our default application.
+If you want to start from scratch by creating your own application, start from **STEP 1 - Create an Application**. If not, start from the **STEP 2 - Subscribe to APIs** section where you can use our default application.
 
 ## AISP flow 
 <!-- AISP menu -->
@@ -58,7 +58,7 @@ If you want to start from scratch by creating your own application, start from [
 </div>
 
 <div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
-<a href="#step-4-authorisation-and-consent">
+<a href="#step-4-consent-authorisation">
 <span class="cStep" >STEP 4 </span>
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
@@ -317,7 +317,7 @@ This step explains authorising account consents. The AISP redirects the bank cus
      
      - Select your application from the drop-down lists.
      - Select Sandbox as the environment. 
-     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-authorisation-and-consent).
+     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-consent-authorisation).
 
 4. Invoke the submission resources using the **Try It Out** option. 
 
@@ -379,7 +379,7 @@ This step explains authorising account consents. The AISP redirects the bank cus
 </div>
 
 <div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
-<a href="#step-4-authorisation-and-consent-1">
+<a href="#step-4-consent-authorisation-1">
 <span class="cStep" >STEP 4 </span>
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
@@ -655,7 +655,7 @@ This step explains authorising payment consents. The PISP redirects the bank cus
      
      - Select your application from the drop-down lists.
      - Select Sandbox as the environment. 
-     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-authorisation-and-consent-1).
+     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-consent-authorisation-1).
 
 4. Click **Generate JWS signature** to expand the form. Provide the requested information as defined below:  
 
@@ -735,7 +735,7 @@ This step explains authorising payment consents. The PISP redirects the bank cus
 </div>
 
 <div class="col-sm-12 col-md-12 col-lg-6 cStepContainer">
-<a href="#step-4-authorisation-and-consent-2">
+<a href="#step-4-consent-authorisation-2">
 <span class="cStep" >STEP 4 </span>
 <div class="cHighlighted cLightGreyBG cHighlightedReducePadding cBorderBox">
 <img src="/img/api-invocation.svg"/>
@@ -995,7 +995,7 @@ This step explains authorising account consents. The AISP redirects the bank cus
      
      - Select your application from the drop-down lists.
      - Select Sandbox as the environment. 
-     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-authorisation-and-consent-2).
+     - Replace the token in the request header with the **user access token** obtained in [STEP 4](#step-4-consent-authorisation-2).
 
 4. Invoke the submission resources using the **Try It Out** option. 
 
