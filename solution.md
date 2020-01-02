@@ -7,11 +7,11 @@ toc: true
 
 ## Overview
 
-WSO2 Open Banking is a purpose built solution for regulatory compliance. It helps align banking and regulatory needs with technology infrastructures and regulatory expertise to quickly satisfy compliance.  It is assembled using a componentized architecture ensuring flexibility to meet different technology use cases. Built on top of a unified integration platform. WSO2 Open Banking helps banks become integration agile for any digital initiative beyond compliance 
+WSO2 Open Banking is a purpose-built solution for regulatory compliance. It helps align banking and regulatory needs with technology infrastructures and regulatory expertise to quickly satisfy compliance.  It is assembled using a componentized architecture ensuring flexibility to meet different technology use cases. Built on top of a unified integration platform. WSO2 Open Banking helps banks become integration agile for any digital initiative beyond compliance. 
 
 WSO2 Open Banking leverages key technology areas critical to a banking infrastructure; API Management, Identity and Access Management, Integration, Analytics and Business Insights, and Fraud Detection bundled together in a componentized architecture. This gives the flexibility to reuse existing infrastructure, and banks only need to obtain the components that are not available in their current infrastructure. 
 
-![wso2-ob-architecture](img/architecture.png)
+<img src="/img/architecture.png" width="80%">
 
 ## API Management
 - Support for Open Banking UK, Berlin Group NextGenPSD2, and Australian Consumer Data Standards API specifications
