@@ -14,6 +14,8 @@ If you want to start from scratch by creating your own application, start from *
 ## AISP flow 
 <!-- AISP menu -->
 
+<img class="cMobileDiagram" src="/img/diagram-AISP-flow.png"/>
+
 <div class="row cDiagramBox">
 
 <div class="col-sm-12 col-md-12 col-lg-2 cStepContainer">

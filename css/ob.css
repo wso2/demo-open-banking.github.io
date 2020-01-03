@@ -221,8 +221,8 @@ h1.cReducedBottomMargin {
 .cIconTitle {
 	width: 100%;
 	display: inline-block;
-    font-size: 1rem;
-	 line-height: 1.6rem;
+    font-size: 0.8rem;
+	 line-height: 1.2rem;
 	 font-weight: 800;
 	 letter-spacing: .05rem;
 	 margin: 20px 0 1.25rem;
@@ -294,3 +294,84 @@ h1.cReducedBottomMargin {
 	padding-bottom: 60px;
 	padding-top: 60px;
 }
+
+.cDiagramBox  .cHighlighted.cLightGreyBG.cHighlightedReducePadding.cBorderBox {
+padding: 1rem;
+}
+
+
+.cPagecontent img {
+		max-width: 100%;
+} 
+.cMobileDiagram  {
+	display: none;
+}
+
+@media (max-width: 1535px) {
+
+	body {
+		background-size: 200% !important;
+	}
+
+	.cDiagramBox  {
+		display: none;
+	}
+
+	.cMobileDiagram {
+		display: block;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	body {
+		background-size: 200% !important;
+	}
+	.navbar-collapse {
+		background-color: #fff;
+	}
+	.navbar-light .navbar-toggler {
+		background-color: #fff;
+		color: #fff;
+	}
+	.nav-link {
+		color: #000 !important;
+	}
+
+	.cTocConatiner {
+		display: none;
+	}
+	
+
+}
+
+
+@media (max-width: 770px) { 
+	body {
+		background-size: 300% !important;
+	}
+
+	.cButton.cDownloadButton {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-bottom: 20px;
+
+	}
+	.cSliderImage {
+		padding-top: 30px;
+	}
+	
+
+}
+
+@media (max-width: 550px) { 
+	body {
+		background-size: 600% !important;
+	}
+
+}
+
+
+
+/* Mobile Daigram */
