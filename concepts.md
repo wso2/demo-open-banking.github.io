@@ -78,7 +78,7 @@ Consent management ensures that the following scenarios take place with the cons
 ## Consumer Data Right
 The Australian Government introduced the Consumer Data Right (CDR) to give consumers more control over their data. CDR provides customers and small businesses a choice about how their data is shared with third parties and sets standards for a whole industry about what data should be made available, safely. In doing so, CDR encourages competition between service providers, leading to better prices for customers and more innovative products and services.
 
-The CDR will be rolled out sector-by-sector, starting with the banking sector. Further information on the CDR is available on the Treasury website at https://treasury.gov.au/consumer-data-right.
+The CDR will be rolled out sector-by-sector, starting with the banking sector. Further information on the CDR is available on the [Treasury website](https://treasury.gov.au/consumer-data-right).
 
 ### Consumer Data Standards
 
