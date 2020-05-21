@@ -204,8 +204,8 @@ NOTE: Follow the above steps to regenerate the access token.
 
 4. Mutual Transport Layer Security (MTLS) is a protocol recommended by the Open Banking Implementation Entity. In the WSO2 Open Banking solution, MTLS is enforced by using handlers in order to ensure that the authenticated client uses the pre-registered transport certificate to communicate with APIs.
 
-    - To invoke the APIs in the demo, download the certificate available [here](/attachments/cert.p12) and import it into your web browser. 
-
+    NOTE: For demo purposes, we have disabled the above feature in the demo site. Therefore, a certificate is not required.
+          
 5. Create a consent using the **POST /account-access-consents** resource. Use the **Try it out** option.
       
       <img src="/img/tryItOut.png" width="800">
@@ -537,8 +537,8 @@ NOTE: Follow the above steps to regenerate the access token.
      
 6. Mutual Transport Layer Security (MTLS) is a protocol recommended by the Open Banking Implementation Entity. In the WSO2 Open Banking solution, MTLS is enforced by using handlers in order to ensure that the authenticated client uses the pre-registered transport certificate to communicate with APIs.
 
-    - To invoke the APIs in the demo, download the certificate available [here](/attachments/cert.p12) and import it into your web browser. 
-
+      NOTE: For demo purposes, we have disabled the above feature in the demo site. Therefore, a certificate is not required.
+    
 7. For example, create a Domestic Payment Consent using the **POST /domestic-payment-consents** resource. 
     
     - Use the **Try it out** option.
@@ -882,8 +882,8 @@ NOTE: Follow the above steps to regenerate the access token.
 
 4. Mutual Transport Layer Security (MTLS) is a protocol recommended by the Open Banking Implementation Entity. In the WSO2 Open Banking solution, MTLS is enforced by using handlers in order to ensure that the authenticated client uses the pre-registered transport certificate to communicate with APIs.
 
-    - To invoke the APIs in the demo, download the certificate available [here](/attachments/cert.p12) and import it into your web browser. 
-
+    NOTE: For demo purposes, we have disabled the above feature in the demo site. Therefore, a certificate is not required.
+          
 5. Create a consent using the **POST /funds-confirmation-consents** resource. Use the **Try it out** option.
       
       <img src="/img/tryOutCOFConsent.png" width="800">
