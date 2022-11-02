@@ -9,13 +9,11 @@ This guide walks you through the WSO2 Open Banking Accelerator Sandbox.
 
 ## Sign up as an API consumer
 
-- Click [here](https://accounts.asgardeo.io/t/tpptenentsorg/accountrecoveryendpoint/register.do?client_id=SfDcIpAGUQXCOdZPPX02DTNaeFwa&commonAuthCallerPath=%2Ft%2Ftpptenentsorg%2Foauth2%2Fauthorize&forceAuth=false&passiveAuth=false&redirect_uri=https%3A%2F%2Fsandbox-openbanking.wso2.com%2Fcommonauth&response_type=code&scope=openid&state=2fd29618-b0b6-4db5-8e49-4ecaa549d68e%2COIDC&sessionDataKey=ed9176cb-6d0c-48f9-b8a4-a5e7839fdfd8&relyingParty=SfDcIpAGUQXCOdZPPX02DTNaeFwa&type=oidc&sp=TPP_Login&isSaaSApp=false&authenticators=BasicAuthenticator%3ALOCAL&reCaptcha=true&reCaptchaResend=true&callback=https%3A%2F%2Faccounts.asgardeo.io%3A443%2Ft%2Ftpptenentsorg%2Fauthenticationendpoint%2Flogin.do%3Fclient_id%3DSfDcIpAGUQXCOdZPPX02DTNaeFwa%26commonAuthCallerPath%3D%2Ft%2Ftpptenentsorg%2Foauth2%2Fauthorize%26forceAuth%3Dfalse%26passiveAuth%3Dfalse%26redirect_uri%3Dhttps%3A%2F%2Fsandbox-openbanking.wso2.com%2Fcommonauth%26response_type%3Dcode%26scope%3Dopenid%26state%3D2fd29618-b0b6-4db5-8e49-4ecaa549d68e%2COIDC%26sessionDataKey%3Ded9176cb-6d0c-48f9-b8a4-a5e7839fdfd8%26relyingParty%3DSfDcIpAGUQXCOdZPPX02DTNaeFwa%26type%3Doidc%26sp%3DTPP_Login%26isSaaSApp%3Dfalse%26authenticators%3DBasicAuthenticator%3ALOCAL%26reCaptcha%3Dtrue%26reCaptchaResend%3Dtrue)
-  to create an account in the portal as an API Consumer(TPP/Data Recipient).
+- Click here to create an account in the portal as an API Consumer(TPP/Data Recipient).
 
 ## Sign up as a bank customer 
 
-- Click [here](https://accounts.asgardeo.io/t/psutenentsorg/accountrecoveryendpoint/register.do?client_id=HVWp3okkzSev2R_gFVAAAg0j2M8a&commonAuthCallerPath=%2Ft%2Fpsutenentsorg%2Foauth2%2Fauthorize&forceAuth=false&passiveAuth=false&redirect_uri=https%3A%2F%2Fis-sandbox-openbanking.wso2.com%2Fcommonauth&response_type=code&scope=openid&state=bb4a29df-e421-423e-bd5b-d85830752c8f%2COIDC&sessionDataKey=5fb2e67e-0870-463a-8ee7-9907a48b24e4&relyingParty=HVWp3okkzSev2R_gFVAAAg0j2M8a&type=oidc&sp=PSU_Login&isSaaSApp=false&authenticators=BasicAuthenticator%3ALOCAL&reCaptcha=true&reCaptchaResend=true&callback=https%3A%2F%2Faccounts.asgardeo.io%3A443%2Ft%2Fpsutenentsorg%2Fauthenticationendpoint%2Flogin.do%3Fclient_id%3DHVWp3okkzSev2R_gFVAAAg0j2M8a%26commonAuthCallerPath%3D%2Ft%2Fpsutenentsorg%2Foauth2%2Fauthorize%26forceAuth%3Dfalse%26passiveAuth%3Dfalse%26redirect_uri%3Dhttps%3A%2F%2Fis-sandbox-openbanking.wso2.com%2Fcommonauth%26response_type%3Dcode%26scope%3Dopenid%26state%3Dbb4a29df-e421-423e-bd5b-d85830752c8f%2COIDC%26sessionDataKey%3D5fb2e67e-0870-463a-8ee7-9907a48b24e4%26relyingParty%3DHVWp3okkzSev2R_gFVAAAg0j2M8a%26type%3Doidc%26sp%3DPSU_Login%26isSaaSApp%3Dfalse%26authenticators%3DBasicAuthenticator%3ALOCAL%26reCaptcha%3Dtrue%26reCaptchaResend%3Dtrue)
-  to create an account in the portal as a bank customer.
+- Click here to create an account in the portal as a bank customer.
 
 ## Sign in as an API consumer
 
