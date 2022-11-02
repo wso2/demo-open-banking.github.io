@@ -27,7 +27,7 @@ This guide walks you through the WSO2 Open Banking Accelerator Sandbox.
    - Token API: To generate application access tokens and the user access tokens 
    - Authorize API: To generate HTTPS requests that will authorize the consent prior to obtaining the authorization code 
    - Account and Transaction API: To generate accounts-consents in order to obtain account-related information 
-   - CDR Dynamic Client Registration API: To create Dynamic Client Registration (DCR) Applications 
+   - Dynamic Client Registration API: To create Dynamic Client Registration (DCR) Applications 
     
 ## Try out the flow
 
@@ -36,15 +36,18 @@ information using an authorized consent.
 
 ### Register an application
 
-- Go to the **CDR-Dynamic Client Registration API**.
+If you already have a Client ID of a registered application in the portal, skip this section.
+
+- Go to the **Dynamic Client Registration API**.
 - From the left menu pane, select the **Try Out** option.
 - Copy the SSA available [here](/attachments/ssa.txt).
 - Use the content and generate the payload. <img src="/img/qsg/GeneratePayload.png"/>
 - Select the DCR application **POST /register** call. 
 - Paste the previously generated payload as the request body. <img src="/img/qsg/DCRPost.png"/>
 - Click **Execute**.
-- From the response, copy the **Client ID** of the application.
-- If you already have a Client ID of a registered application in the portal, skip the steps above.
+- From the response, copy the **Client ID** of the application. You can use the same application
+  to try out the flow again.
+- Save the Client ID for future use, as you cannot retrieve this value later. 
 
 ### Obtain an application access token
 
@@ -55,7 +58,7 @@ information using an authorized consent.
 - Fill in the required fields in the form along with the generated assertion. <img src="/img/qsg/ObtainAccessToken.png"/>
 - Set the **grant_type** to **client_credentials** and leave the code input field empty.
 - Click **Execute**.
-- From the response, copy the **access token** value. This is the application access token.
+- From the response, copy the **application access token** value. 
 
 ### Initiate a consent
 
@@ -102,8 +105,7 @@ information using an authorized consent.
 - Click **Execute**.
 - Set the **grant_type** to **authorization_code**. 
 - Use the authorization code obtained from the previous step for the **code** input field.
-- From the response, copy the **access token** value. This is the user access token.
-
+- From the response, copy the **user access token** value.
 
 ### Retrieve accounts information
 
