@@ -111,7 +111,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 
 - Go to the **Account and Transaction API**.
 - From the left menu pane, select the **Try Out** option. 
-- In the **Security** section, enter the access token obtained in the previous step.
+- In the **Security** section, enter the user access token obtained in the previous step.
 - Select the **Get Accounts** call. 
 - Set the **Account Id** to **1**. <img src="/img/qsg/GetAccounts.png"/>
 - Click **Execute**.
