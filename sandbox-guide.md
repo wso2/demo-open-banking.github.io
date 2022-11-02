@@ -58,13 +58,13 @@ If you already have a Client ID of a registered application in the portal, skip 
 - Fill in the required fields in the form along with the generated assertion. <img src="/img/qsg/ObtainAccessToken.png"/>
 - Set the **grant_type** to **client_credentials** and leave the code input field empty.
 - Click **Execute**.
-- From the response, copy the **application access token** value. 
+- From the response, copy the **access token** value. This is the application access token.
 
 ### Initiate a consent
 
 - Go to the **Account and Transaction API**.
 - From the left menu pane, select the **Try Out** option.
-- In the **Security** section, enter the access token obtained in the previous step.
+- In the **Security** section, enter the application access token obtained in the previous step.
 - Select the **POST account-access-consents** call. <img src="/img/qsg/EnterAccessToken.png"/>
 - Update the **DateTime** values in the sample payload to future date and time.
   <img src="/img/qsg/CreateAccountsConsent.png"/> 
@@ -105,7 +105,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 - Click **Execute**.
 - Set the **grant_type** to **authorization_code**. 
 - Use the authorization code obtained from the previous step for the **code** input field.
-- From the response, copy the **user access token** value.
+- From the response, copy the **access token** value. This is the user access token.
 
 ### Retrieve accounts information
 
