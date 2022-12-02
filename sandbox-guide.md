@@ -67,9 +67,13 @@ If you already have a Client ID of a registered application in the portal, skip 
 - In the **Security** section, enter the application access token obtained in the previous step.
 - Select the **POST account-access-consents** call. <img src="/img/qsg/EnterAccessToken.png"/>
 - Update the **DateTime** values in the sample payload to future date and time. Include the below mentioned set of permissions in the **Permissions** section of the request body to try out all the Account and Transaction APIs.
+
   ```"ReadAccountsDetail",```
+
   ```"ReadTransactionsDetail",```
+  
   ```"ReadBalances"```
+
   <img src="/img/qsg/CreateAccountsConsent.png"/> 
 - Click **Execute**.
 - From the response, copy the **Consent ID** value.
