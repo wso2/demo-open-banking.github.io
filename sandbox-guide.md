@@ -27,7 +27,7 @@ This guide walks you through the WSO2 Open Banking Accelerator Sandbox.
    - Token API: To generate application access tokens and the user access tokens 
    - Authorize API: To generate HTTPS requests that will authorize the consent prior to obtaining the authorization code 
    - Account and Transaction API: To generate accounts-consents in order to obtain account-related information 
-   - Dynamic Client Registration API: To create Dynamic Client Registration (DCR) Applications 
+   - Dynamic Client Registration API: To create Dynamic Client Registration (DCR) Applications <img src="/img/qsg/HomePageAfterLogin.png"/>
     
 ## Try out the flow
 
@@ -71,7 +71,7 @@ If you already have a Client ID of a registered application in the portal, skip 
   ```"ReadAccountsDetail",```
 
   ```"ReadTransactionsDetail",```
-  
+
   ```"ReadBalances"```
 
   <img src="/img/qsg/CreateAccountsConsent.png"/> 
