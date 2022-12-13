@@ -41,7 +41,8 @@ If you already have a Client ID of a registered application in the portal, skip 
 - Go to the **Dynamic Client Registration API**.
 - From the left menu pane, select the **Try Out** option.
 - Copy the SSA available [here](/attachments/ssa.txt).
-- Use the content and generate the payload. <img src="/img/qsg/GeneratePayload.png"/>
+- Paste the content copied for the **SSA** and leave the **Software ID** input field blank. <img src="/img/qsg/GeneratePayloadCreate.png"/>
+- Then generate the payload.
 - Select the DCR application **POST /register** call. 
 - Paste the previously generated payload as the request body. <img src="/img/qsg/DCRPost.png"/>
 - Click **Execute**.
@@ -123,3 +124,40 @@ If you already have a Client ID of a registered application in the portal, skip 
 - Set the **Account Id** to **1**. <img src="/img/qsg/GetAccounts.png"/>
 - Click **Execute**.
 - The response contains account details.
+
+### Retrieve an application
+
+- Follow the **Obtain an application access token** step and obtain an application access token.
+- Go to the **Dynamic Client Registration API**.
+- From the left menu pane, select the **Try Out** option.
+- In the **Security** section, enter the application access token obtained.
+- Select the DCR application **GET /register/{ClientId}** call. 
+- Enter the **Client ID** of the application created. <img src="/img/qsg/DCR_Retrieve.png"/>
+- Click **Execute**.
+- The response contains the application details.
+
+### Update an application
+
+- Follow the **Obtain an application access token** step and obtain an application access token.
+- Go to the **Dynamic Client Registration API**.
+- From the left menu pane, select the **Try Out** option.
+- In the **Security** section, enter the application access token obtained.
+- Follow the **Retrieve an application** step and obtain the **software_id** from the response.
+- Copy the SSA available [here](/attachments/ssa_update.txt).
+- Paste the content copied for the **SSA** and input the **Software ID** of the application to update which was obtained by retrieving the application details previously. <img src="/img/qsg/GeneratePayloadUpdate.png"/>
+- Then generate the payload. 
+- Select the DCR application **PUT /register/{ClientId}** call. 
+- Paste the previously generated payload and enter the **Client ID** of the application created. <img src="/img/qsg/DCR_Update.png"/>
+- Click **Execute**.
+- The response contains the updated application details.
+
+### Delete an application
+
+- Follow the **Obtain an application access token** step and obtain an application access token.
+- Go to the **Dynamic Client Registration API**.
+- From the left menu pane, select the **Try Out** option.
+- In the **Security** section, enter the application access token obtained.
+- Select the DCR application **DELETE /register/{ClientId}** call. 
+- Enter the **Client ID** of the application created. <img src="/img/qsg/DCR_Delete.png"/>
+- Click **Execute**.
+- The response will be a 204 which confirms that the application was deleted.
