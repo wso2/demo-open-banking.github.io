@@ -44,7 +44,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 - Paste the content copied for the **SSA** and leave the **Software ID** input field blank. <img src="/img/qsg/GeneratePayloadCreate.png"/>
 - Then generate the payload.
 - Select the DCR application **POST /register** call. 
-- Paste the previously generated payload as the request body. <img src="/img/qsg/DCRPost.png"/>
+- Paste the previously generated payload as the request body. <img src="/img/qsg/DCR_Create.png"/>
 - Click **Execute**.
 - From the response, copy the **Client ID** of the application. You can use the same application
   to try out the flow again.
@@ -54,9 +54,9 @@ If you already have a Client ID of a registered application in the portal, skip 
 
 - Go to the **Token API**.
 - From the left menu pane, select the **Try Out** option.
-- Enter the **Client ID** of the application and generate an assertion. <img src="/img/qsg/GenerateAssertion.png"/>
+- Enter the **Client ID** of the application and generate an assertion. <img src="/img/qsg/Generate_Assertion.png"/>
 - Select the **POST /v1.0.0** call to obtain the access token.
-- Fill in the required fields in the form along with the generated assertion. <img src="/img/qsg/ObtainAccessToken.png"/>
+- Fill in the required fields in the form along with the generated assertion. <img src="/img/qsg/Generate_Token.png"/>
 - Set the **grant_type** to **client_credentials** and leave the code input field empty.
 - Click **Execute**.
 - From the response, copy the **access token** value. This is the application access token.
@@ -65,8 +65,8 @@ If you already have a Client ID of a registered application in the portal, skip 
 
 - Go to the **Account and Transaction API**.
 - From the left menu pane, select the **Try Out** option.
-- In the **Security** section, enter the application access token obtained in the previous step.
-- Select the **POST account-access-consents** call. <img src="/img/qsg/EnterAccessToken.png"/>
+- In the **Security** section, enter the application access token obtained in the previous step. <img src="/img/qsg/Security_Section.png"/>
+- Select the **POST account-access-consents** call. 
 - Update the **DateTime** values in the sample payload to future date and time. Include the below mentioned set of permissions in the **Permissions** section of the request body to try out all the Account and Transaction APIs.
 
   ```"ReadAccountsDetail",```
@@ -84,7 +84,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 - Go to the **Authorize API**.
 - From the left menu pane, select the **Try Out** option.
 - Fill in the required fields in the form and generate the request object. <br/>
-  <img src="/img/qsg/GenerateRequestObject.png"/> <br/>
+  <img src="/img/qsg/Generate_RequestObject.png"/> <br/>
 - Use the **Client ID** of the DCR application created.
 - Use the **Consent ID** obtained from the previous step.
 - Set the **Scopes** to `accounts openid`.
@@ -94,7 +94,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 
 - Select the **GET** call to obtain the HTTP request to authorize the consent.
 - Fill in the required fields in the form along with the request object. 
-  <br/> <img src="/img/qsg/ObtainAuthorizationCode.png"/> <br/>
+  <br/> <img src="/img/qsg/Generate_AuthCode.png"/> <br/>
 - Click **Execute**. 
 - Copy the generated **Request URL** and paste it into a browser.
 - Enter the user credentials of the bank customer to authorize the consent.
@@ -121,7 +121,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 - From the left menu pane, select the **Try Out** option. 
 - In the **Security** section, enter the user access token obtained in the previous step.
 - Select the **Get Accounts** call. 
-- Set the **Account Id** to **1**. <img src="/img/qsg/GetAccounts.png"/>
+- Set the **Account Id** to **1**. <img src="/img/qsg/Account_Retrieval.png"/>
 - Click **Execute**.
 - The response contains account details.
 
