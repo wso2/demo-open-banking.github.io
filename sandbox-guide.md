@@ -75,7 +75,7 @@ If you already have a Client ID of a registered application in the portal, skip 
 
   ```"ReadBalances"```
 
-  <img src="/img/qsg/CreateAccountsConsent.png"/> 
+  <img src="/img/qsg/Consent_Initiation.png"/> 
 - Click **Execute**.
 - From the response, copy the **Consent ID** value.
 
