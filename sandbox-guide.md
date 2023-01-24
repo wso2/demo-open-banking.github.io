@@ -19,6 +19,7 @@ This guide walks you through the WSO2 Open Banking Accelerator Sandbox.
 
 ## Sign in as an API consumer
 
+- Visit the Developer Portal from [here](https://sandbox-openbanking.wso2.com/devportal/apis).
 - Click the **SIGN-IN** button.
 - Enter the user credentials for an API Consumer.
 - Once you sign in, you can see the published APIs in the **APIs** tab. 
