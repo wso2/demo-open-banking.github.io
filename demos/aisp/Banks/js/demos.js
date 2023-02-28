@@ -7,13 +7,13 @@ $(function() {
         var citizenBank = {
                 title: "Citizen Bank Open Banking Solution",
                 footer: "Citizen Bank",
-                style: "css/citizenbank.css",
+                style: "/demos/aisp/Banks/css/citizenbank.css",
                 logo: "img/citizen_bank_logo.png"
             },
             eudcBank = {
                 title: "EUDC Bank Open Banking Solution",
                 footer: "EUDC Bank",
-                style: "css/eudcbank.css",
+                style: "/demos/aisp/Banks/css/eudcbank.css",
                 logo: "img/eudc_bank_logo.png"
             };
         
