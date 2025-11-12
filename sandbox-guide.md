@@ -1,9 +1,10 @@
----
-layout: ob-base-toc-page
-title: Quick Start Guide 
-intro: Try out the Open Banking APIs in the Developer Portal
-toc: true
----
+[//]: # (---)
+[//]: # (layout: ob-base-toc-page)
+[//]: # (title: Quick Start Guide )
+[//]: # (intro: Try out the Open Banking APIs in the Developer Portal)
+[//]: # (toc: true)
+[//]: # (---)
+[//]: # (Uncomment above to enable this page.)
 
 This guide walks you through the WSO2 Open Banking Accelerator Sandbox.
 
